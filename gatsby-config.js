@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `platine`,
-    description: `platine le blog`,
+    description: `le média des pépites littéraires et musicales `,
     author: `cdltbisou`,
   },
   plugins: [
@@ -38,6 +38,15 @@ module.exports = {
     //    ],
     //  },
     //  },
+    // using svg
+    {
+        resolve: "gatsby-plugin-react-svg",
+        options: {
+          rule: {
+            include: /images/
+          }
+        }
+      },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
