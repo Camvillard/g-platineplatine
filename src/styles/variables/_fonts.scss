@@ -1,0 +1,20 @@
+/*----- VARIABLES : FONTS ----- */
+
+@import url("https://use.typekit.net/ljh4kfa.css");
+
+
+$body-font: 'rubik', sans-serif;
+$headers-font: 'objektiv-mk1', sans-serif;
+$accent-font: 'gemeli-mono', serif;
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+}
+
+.accent-text, em {
+  font-family: $accent-font;
+}
