@@ -1,0 +1,6 @@
+#logo-platine {
+  border: 3px solid red;
+  &:hover {
+    transform: rotate(180deg);
+  }
+}

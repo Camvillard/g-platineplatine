@@ -6,18 +6,14 @@ import { graphql } from "gatsby";
 // import Image from "../components/Image";
 import SEO from "../components/Seo";
 // import Footer from '../components/Footer'
-
 import Logo from "../images/platine-logo_v0.svg";
+// import LogoImage from "../components/logo";
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 import '../styles/layouts/_splashpage.scss';
 
 const IndexPage = ({data}) => {
-library.add(fab, faCheckSquare, faCoffee, faHeart)
   return (
     <div id="splash-content">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />

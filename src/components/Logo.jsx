@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+// import logo from "../images/platine-logo_v0.png"
+
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -13,20 +15,36 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Logo = () => (
-  <StaticQuery
+class LogoImage extends React.Component {
+
+  render() {
+    const image = this.props.data.placeholderImage.childImageSharp;
+    console.log(image)
+    return(
+      <div id="logo-platine">
+        <img src={image.fluid.src} alt=""/>
+      </div>
+    )
+  }
+};
+
+export default (props) => {
+  return (<StaticQuery
     query={graphql`
       query {
         placeholderImage: file(relativePath: { eq: "platine-logo_v0.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
-)
-export default Logo
+    `
+    }
+
+    render={(data) => <LogoImage data={data} />
+    }
+  />)
+}
+
