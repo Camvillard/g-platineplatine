@@ -22,6 +22,13 @@
     font-size: 1rem;
   }
 
+  svg {
+    transition: 0.6s;
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
 }
 
 
