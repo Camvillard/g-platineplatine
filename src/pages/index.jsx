@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 // internal components
 import SEO from "../components/seo";
 import Icons from "../components/icons"
+import MailChimpForm from "../components/mailchimp-form";
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";
@@ -46,9 +47,8 @@ const IndexPage = ({data}) => {
       <p>Pour être informé(e) du lancement du site et recevoir la toute première
       newsletter collaborative de Platine, inscris-toi par ici :</p>
 
+      <MailChimpForm />
 
-      <form action="https://instagram.us20.list-manage.com/subscribe/post?u=e706a2e0903a6884875d845cd&amp;id=2095cd4f8a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" >
-      </form>
 
       </div>
       {/* end of #landing-cta */}
