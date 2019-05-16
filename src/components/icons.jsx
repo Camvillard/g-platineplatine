@@ -17,18 +17,17 @@ import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 const Icons = () => {
   return(
     <div id="social-icons">
-    <div id="instagram" className="social-icon-white icon-aqua">
-      <FaInstagram />
-    </div>
+      <div id="instagram" className="social-icon-white icon-aqua">
+        <FaInstagram />
+      </div>
 
-    <div id="twitter" className="social-icon-white icon-pink">
-      <FaTwitter />
-    </div>
+      <div id="twitter" className="social-icon-white icon-pink">
+        <FaTwitter />
+      </div>
 
-    <div id="facebook" className="social-icon-white icon-yellow">
-      <FaFacebookF />
-    </div>
-
+      <div id="facebook" className="social-icon-white icon-yellow">
+        <FaFacebookF />
+      </div>
     </div>
   )
 }
