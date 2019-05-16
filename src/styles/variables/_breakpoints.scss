@@ -1,5 +1,10 @@
-/*----- LAYOUTS: CONTACT ----- */
+/* ------ VARIABLES : BREAKPOINTS ------ */
 
+
+$sm-screen: 768px;
+$md-screen: 992px;
+$lg-screen: 1200px;
+$hg-screen: 1440px;
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

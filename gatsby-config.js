@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `platine`,
-    description: `le média des pépites littéraires et musicales `,
+    description: `lisez, écoutez, faites tourner`,
     author: `cdltbisou`,
   },
   plugins: [
@@ -52,13 +52,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `platine | lisez, écoutez, faites tourner`,
+        short_name: `platine`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/platine_logo-mini.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
