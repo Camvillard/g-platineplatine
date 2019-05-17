@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo.jsx"
+import SEO from "../components/Seo.jsx"
 
 const AboutPage = () => (
   <div>

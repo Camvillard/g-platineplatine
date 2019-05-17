@@ -3,9 +3,9 @@ import React from "react";
 import { graphql } from "gatsby";
 
 // internal components
-import SEO from "../components/seo.jsx";
-import Icons from "../components/icons.jsx"
-import MailChimpForm from "../components/mailchimp-form.jsx";
+import SEO from "../components/Seo";
+import Icons from "../components/Icons"
+import MailChimpForm from "../components/MailchimpForm.jsx";
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";

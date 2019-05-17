@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import SEO from "../components/seo.jsx";
+import SEO from "../components/Seo.jsx";
 
 import Logo from "../images/platine-logo_v0.svg";
 import Cercle from "../images/cercle.svg";
