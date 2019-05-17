@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="305.7" height="507.26" viewBox="0 0 305.7 507.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9ef2d6;
+      }
+
+      .cls-2 {
+        fill: #0f0f0f;
+      }
+    </style>
+  </defs>
+  <title>platine_logo-mini</title>
+  <g id="Calque_2" data-name="Calque 2">
+    <g id="texte">
+      <g>
+        <circle class="cls-1" cx="119.98" cy="119.98" r="119.98"/>
+        <path class="cls-2" d="M114.61,76.86H210.1c78.58,0,106.49,46.65,91.88,118.56L295,229.62C280.82,300.41,252.74,335,168.74,335H140.86L104.62,507.26H23.25Zm40.73,192.21h16.8c27.42,0,35.12-14,41.31-42.64l7.65-37c6.18-29.26,4.79-48.49-22.79-48.49H182.17Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
