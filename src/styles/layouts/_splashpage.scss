@@ -48,12 +48,12 @@ body {
     font-size: 1rem;
   }
 
-  svg {
-    transition: 0.6s;
-    &:hover {
-      transform: rotate(180deg);
-    }
-  }
+  // svg {
+  //   transition: 0.6s;
+  //   &:hover {
+  //     transform: rotate(180deg);
+  //   }
+  // }
 
 }
 
@@ -151,6 +151,10 @@ form#landing-form {
 
 @media (min-width: $lg-screen) {
   #splash-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 
     svg#icon-logo {
       width: 60% !important;
@@ -188,7 +192,7 @@ form#landing-form {
   #landing-cta {
     flex: 1 0 50%;
     background: $aqua;
-    margin: 16px auto;
+    margin: 16px auto 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
