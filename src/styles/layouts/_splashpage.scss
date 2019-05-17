@@ -30,7 +30,7 @@ body {
 
 #splash-content {
   min-height: 100vh;
-  // width: 100vw;
+    padding-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,6 @@ body {
 }
 
 h5#landing-accent {
-  color: $bright-pink;
   font-size: 3.2rem;
 }
 
