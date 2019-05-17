@@ -34,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: between;
 
   svg#icon-logo {
     width: 80% !important;
@@ -176,23 +176,49 @@ form#landing-form {
 
   #landing-grid {
     display: flex;
+    height: 64vh;
     width: 100vw;
     margin-bottom: 0;
   }
 
   #landing-text {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    h4 {
+      margin: 8px auto;
+    }
   }
 
   .landing-cats {
     display: flex;
+
+    h5 {
+      margin: 8px auto;
+    }
   }
+
+  .landing-cat {
+    margin: 16px auto;
+    h5 {
+      font-size: 2.6rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .landing-msg {
+    h5 {
+      margin: 8px auto;
+    }
+  }
+
 
   #landing-cta {
     flex: 1 0 50%;
     background: $aqua;
-    margin: 16px auto 0px;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
