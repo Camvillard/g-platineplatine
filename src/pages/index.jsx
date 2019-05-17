@@ -33,13 +33,11 @@ const IndexPage = ({data}) => {
               <p>si tu te demandes mais QUE LIRE ? face à l’étendue des livres dispos en librairie.</p>
             </div>
 
-
             <div className="landing-cat">
               <IconMusic id="icon-music" />
               <h5>découvertes musicales</h5>
               <p>yes ! enfin de quoi renouveler  plus souvent ta playlist.</p>
             </div>
-
           </div>
 
           <div className="landing-msg">
@@ -47,8 +45,6 @@ const IndexPage = ({data}) => {
             <h5 id="landing-accent">Tu as hâte ?<br/>Moi oui !</h5>
 
           </div>
-
-
 
         </div>
 
