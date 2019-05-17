@@ -9,6 +9,8 @@ import MailChimpForm from "../components/mailchimp-form";
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";
+import IconMusic from "../images/icon-music.svg";
+import IconBook from "../images/icon-book.svg";
 import { FaBookOpen, FaMusic } from 'react-icons/fa'
 
 
@@ -20,26 +22,26 @@ const IndexPage = ({data}) => {
   return (
     <div id="splash-content">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Logo />
+      <Logo id="icon-logo"/>
 
       <div id="landing-text">
         <h4>ta dose quotidienne de </h4>
 
-        <div id="landing-books">
+        <div className="landing-cat">
           <FaBookOpen />
           <h5>pépites littéraires</h5>
           <p>si tu te demandes mais QUE LIRE ? face à l’étendue des livres dispos en librairie</p>
         </div>
 
 
-        <div id="landing-music">
-          <FaMusic />
+        <div className="landing-cat">
+          <FaMusic  />
           <h5>découvertes musicales</h5>
           <p>yes ! enfin de quoi renouveler  plus souvent ta playlist</p>
         </div>
 
         <p>à recevoir chaque semaine directement dans ta boîte mail.</p>
-        <h5>Tu as hâte ? Moi oui !</h5>
+        <h5 id="landing-accent">Tu as hâte ? Moi oui !</h5>
 
       </div>
 
