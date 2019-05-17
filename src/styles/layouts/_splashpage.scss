@@ -49,6 +49,7 @@ h5#landing-accent {
 }
 
 #landing-cta {
+  width: 100vw;
   background: $aqua;
   padding: 8px 24px;
   margin: 16px auto;
@@ -57,7 +58,10 @@ h5#landing-accent {
   }
 }
 
-
+#icon-book,
+#icon-music {
+  font-size: 48px;
+}
 
 
 
@@ -97,7 +101,7 @@ form#landing-form {
 
   #splash-content {
 
-    svg {
+    svg#icon-logo {
       width: 60% !important;
       height: 60% !important;
     }
@@ -108,5 +112,11 @@ form#landing-form {
       font-size: 1rem;
     }
   }
+
+  #icon-book,
+  #icon-music {
+    font-size: 68px;
+  }
+
 
 }

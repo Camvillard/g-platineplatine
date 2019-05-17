@@ -28,14 +28,14 @@ const IndexPage = ({data}) => {
         <h4>ta dose quotidienne de </h4>
 
         <div className="landing-cat">
-          <FaBookOpen />
+          <FaBookOpen id="icon-book" />
           <h5>pépites littéraires</h5>
           <p>si tu te demandes mais QUE LIRE ? face à l’étendue des livres dispos en librairie</p>
         </div>
 
 
         <div className="landing-cat">
-          <FaMusic  />
+          <FaMusic id="icon-music" />
           <h5>découvertes musicales</h5>
           <p>yes ! enfin de quoi renouveler  plus souvent ta playlist</p>
         </div>
