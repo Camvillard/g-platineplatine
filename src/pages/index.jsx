@@ -11,7 +11,6 @@ import MailChimpForm from "../components/mailchimp-form";
 import Logo from "../images/platine_logo-principal.svg";
 import IconMusic from "../images/music.svg";
 import IconBook from "../images/book.svg";
-import { FaBookOpen, FaMusic } from 'react-icons/fa'
 
 // styles
 import '../styles/layouts/_splashpage.scss';

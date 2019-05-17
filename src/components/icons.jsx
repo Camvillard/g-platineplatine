@@ -3,10 +3,6 @@ import React from "react";
 
 // images & assets
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare, faHeart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 
