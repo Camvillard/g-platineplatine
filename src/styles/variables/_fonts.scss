@@ -1,11 +1,11 @@
 /*----- VARIABLES : FONTS ----- */
 
-@import url("https://use.typekit.net/ljh4kfa.css");
+@import url("https://use.typekit.net/jwd5yhl.css");
 
 
-$body-font: 'rubik', sans-serif;
-$headers-font: 'objektiv-mk1', sans-serif;
-$accent-font: 'gemeli-mono', serif;
+$body-font: 'muli', sans-serif;
+$headers-font: 'acumin-pro-extra-condensed', sans-serif;
+$accent-font: 'acumin-pro-extra-condensed', sans-serif;
 
 body {
   font-family: $body-font;
@@ -13,10 +13,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
+  text-transform: uppercase;
 }
 
 .accent-text, em {
   font-family: $accent-font;
+  text-transform: uppercase;
+}
+
+.accent-text-bold {
+  font-family: $accent-font;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 

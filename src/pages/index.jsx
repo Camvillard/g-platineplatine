@@ -43,11 +43,11 @@ const IndexPage = ({data}) => {
 
       </div>
 
-      <div id="landing-cta">
+      <div id="landing-cta" className="accent-text-bold">
       <p>Pour être informé(e) du lancement du site et recevoir la toute première
       newsletter collaborative de Platine, inscris-toi par ici :</p>
 
-      <MailChimpForm />
+      <MailChimpForm id="landing-form" />
 
 
       </div>

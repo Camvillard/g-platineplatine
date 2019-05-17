@@ -23,6 +23,47 @@
   }
 }
 
+#landing-cta {
+  background: $aqua;
+  padding: 8px 24px;
+  margin: 16px auto;
+  p {
+    color: $dark-gray;
+  }
+}
+
+
+// form
+form#landing-form {
+  input {
+    display: block;
+    width: 100%;
+    border: 2px solid white;
+    background: $aqua;
+  }
+
+  button {
+    background: white;
+    border: 2px solid white;
+  }
+
+  input, button {
+    border-radius: 32px;
+    margin-top: 8px;
+    text-transform:uppercase;
+    font-weight: 800;
+    padding: 0px 16px;
+    font-family: $accent-font;
+    color: $dark-gray;
+  }
+
+  ::placeholder {
+    color: white;
+    opacity: 1;
+  }
+}
+
+
 
 @media only screen and (min-width: 1024px) {
 
