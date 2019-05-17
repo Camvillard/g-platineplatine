@@ -13,8 +13,6 @@ import IconMusic from "../images/music.svg";
 import IconBook from "../images/book.svg";
 import { FaBookOpen, FaMusic } from 'react-icons/fa'
 
-
-
 // styles
 import '../styles/layouts/_splashpage.scss';
 

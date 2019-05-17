@@ -1,0 +1,81 @@
+
+
+/*----- LAYOUTS : MAIN ----- */
+
+@import "../variables/index";
+
+#logo-animations {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  svg {
+    width: 80% !important;
+    // height: 80% !important;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+.logos-anims {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-hover {
+  svg {
+    transition: 0.6s;
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+#logo-color-box {
+  position: relative;
+  width: 100%;
+
+  .cercle-platine {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 50px;
+  }
+
+  .name-platine {
+    position: absolute;
+    z-index: 4;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  #logo-animations {
+
+    svg {
+      width: 60% !important;
+      height: 60% !important;
+    }
+
+    h3 {
+      font-family: $body-font;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
+
+}
