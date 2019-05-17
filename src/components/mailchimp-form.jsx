@@ -25,7 +25,7 @@ class MailChimpForm extends React.Component {
     console.log(this.state.name)
     console.log(this.state.email)
     e.preventDefault();
-    addToMailchimp(this.state.email, this.state) // listFields are optional if you are only capturing the email address.
+    addToMailchimp(this.state.email, {LNAME: this.state.name}) // listFields are optional if you are only capturing the email address.
     .then(data => {
       // I recommend setting data to React state
       // but you can do whatever you want (including ignoring this `then()` altogether)
