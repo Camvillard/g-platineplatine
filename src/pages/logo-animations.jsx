@@ -1,11 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
 
-// import Header from "../components/Header";
-// import Logo from "../components/Logo";
-// import Image from "../components/Image";
+
 import SEO from "../components/seo";
-// import Footer from '../components/Footer'
 
 import Logo from "../images/platine-logo_v0.svg";
 import Cercle from "../images/cercle.svg";
