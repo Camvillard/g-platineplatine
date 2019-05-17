@@ -9,8 +9,8 @@ import MailChimpForm from "../components/mailchimp-form";
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";
-import IconMusic from "../images/icon-music.svg";
-import IconBook from "../images/icon-book.svg";
+import IconMusic from "../images/music.svg";
+import IconBook from "../images/book.svg";
 import { FaBookOpen, FaMusic } from 'react-icons/fa'
 
 
@@ -25,23 +25,23 @@ const IndexPage = ({data}) => {
       <Logo id="icon-logo"/>
 
       <div id="landing-text">
-        <h4>ta dose quotidienne de </h4>
+        <h4><span>ta dose quotidienne de :</span></h4>
 
         <div className="landing-cat">
-          <FaBookOpen id="icon-book" />
+          <IconBook id="icon-book" />
           <h5>pépites littéraires</h5>
-          <p>si tu te demandes mais QUE LIRE ? face à l’étendue des livres dispos en librairie</p>
+          <p>si tu te demandes mais QUE LIRE ? face à l’étendue des livres dispos en librairie.</p>
         </div>
 
 
         <div className="landing-cat">
-          <FaMusic id="icon-music" />
+          <IconMusic id="icon-music" />
           <h5>découvertes musicales</h5>
-          <p>yes ! enfin de quoi renouveler  plus souvent ta playlist</p>
+          <p>yes ! enfin de quoi renouveler  plus souvent ta playlist.</p>
         </div>
 
-        <p>à recevoir chaque semaine directement dans ta boîte mail.</p>
-        <h5 id="landing-accent">Tu as hâte ? Moi oui !</h5>
+        <h4>à recevoir chaque semaine directement dans ta boîte mail.</h4>
+        <h5 id="landing-accent">Tu as hâte ?<br/>Moi oui !</h5>
 
       </div>
 

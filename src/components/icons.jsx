@@ -18,15 +18,21 @@ const Icons = () => {
   return(
     <div id="social-icons">
       <div id="instagram" className="social-icon-white icon-aqua">
+      <a href="#" target="_blank">
         <FaInstagram />
+      </a>
       </div>
 
       <div id="twitter" className="social-icon-white icon-pink">
+      <a href="#" target="_blank">
         <FaTwitter />
+        </a>
       </div>
 
       <div id="facebook" className="social-icon-white icon-yellow">
+      <a href="#" target="_blank">
         <FaFacebookF />
+        </a>
       </div>
     </div>
   )

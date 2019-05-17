@@ -3,6 +3,18 @@
 @import "../variables/index";
 @import "../components/index";
 
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #splash-content {
   // height: 100vh;
   // width: 100vw;
@@ -24,37 +36,45 @@
 }
 
 #landing-text {
+  margin-top: 24px;
   padding: 8px 24px;
   text-align: center;
   h4 {
     font-family: $body-font;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-transform: none;
+    color: $dark-gray;
   }
+
 }
 
 .landing-cat {
+  margin: 32px auto;
+  padding: 8px 24px;
   text-align: center;
   h5 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: $medium-gray !important;
   }
 }
 
 h5#landing-accent {
   color: $bright-pink;
-  font-size: 2rem;
+  font-size: 3.2rem;
 }
 
 #landing-cta {
   width: 100vw;
   background: $aqua;
-  padding: 8px 24px;
+  padding: 32px 32px;
   margin: 16px auto;
   p {
     color: $dark-gray;
+    font-size: 2.4rem;
+    line-height: 1.25;
   }
 }
 
@@ -67,6 +87,9 @@ h5#landing-accent {
 
 // form
 form#landing-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   input {
     display: block;
     width: 100%;
@@ -77,9 +100,11 @@ form#landing-form {
   button {
     background: white;
     border: 2px solid white;
+    width: 48%;
   }
 
   input, button {
+    height: 4rem;
     border-radius: 32px;
     margin-top: 8px;
     text-transform:uppercase;
@@ -87,6 +112,7 @@ form#landing-form {
     padding: 0px 16px;
     font-family: $accent-font;
     color: $dark-gray;
+    font-size: 2rem;
   }
 
   ::placeholder {
