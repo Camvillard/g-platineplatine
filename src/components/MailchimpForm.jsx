@@ -19,9 +19,6 @@ class MailChimpForm extends React.Component {
       email: '',
       name: ''
     }
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = (e) => {
@@ -29,11 +26,10 @@ class MailChimpForm extends React.Component {
     addToMailchimp(this.state.email, {LNAME: this.state.name}) // listFields are optional if you are only capturing the email address.
     .then(data => {
       console.log(data)
+      window.location.href = "/merci"
     })
     .catch(() => {
     })
-    window.location.href = "/merci"
-
   };
 
   handleChange = (e) => {

@@ -4,12 +4,9 @@ import React from "react";
 // internal components
 import SEO from "../components/Seo";
 import Icons from "../components/Icons"
-import MailChimpForm from "../components/MailchimpForm.jsx";
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";
-import IconMusic from "../images/music.svg";
-import IconBook from "../images/book.svg";
 
 // styles
 import '../styles/layouts/_merci.scss';
