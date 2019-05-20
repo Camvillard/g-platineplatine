@@ -19,23 +19,21 @@ class MailChimpForm extends React.Component {
       email: '',
       name: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = (e) => {
-    console.log(this.state.name)
-    console.log(this.state.email)
     e.preventDefault();
     addToMailchimp(this.state.email, {LNAME: this.state.name}) // listFields are optional if you are only capturing the email address.
     .then(data => {
-      // I recommend setting data to React state
-      // but you can do whatever you want (including ignoring this `then()` altogether)
       console.log(data)
     })
     .catch(() => {
-      // unnecessary because Mailchimp only ever
-      // returns a 200 status code
-      // see below for how to handle errors
     })
+    window.location.href = "/merci"
+
   };
 
   handleChange = (e) => {
@@ -43,7 +41,7 @@ class MailChimpForm extends React.Component {
     this.setState({
       [`${e.target.name}`]: e.target.value
     })
-  }
+  };
 
   render() {
     return(

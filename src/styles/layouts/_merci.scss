@@ -1,0 +1,99 @@
+/*----- LAYOUTS : MERCI ----- */
+
+@import "../variables/index";
+@import "../components/index";
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+#merci-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2vh;
+
+  h2 {
+    margin: 0;
+    font-size: 6rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+#merci-text {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#merci-logo {
+  width: 60vw;
+  height: 300px;
+  margin-bottom: 32px;
+}
+
+#icons-merci {
+  position: relative;
+  width: 80px;
+  height: 64px;
+}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  #merci-content {
+
+    h2 {
+      font-size: 8rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  #merci-logo {
+    width: 50vw;
+    height: 400px;
+    margin-bottom: 24px;
+  }
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

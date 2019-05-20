@@ -60,7 +60,7 @@ const IndexPage = ({data}) => {
       </div>
 
 
-      <Icons />
+      <Icons id="social-icons" />
 
     </div>
   )
