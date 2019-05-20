@@ -3,7 +3,11 @@
 a {
   text-decoration: none;
   color: $aqua;
+  &:hover {
+    cursor: pointer;
+  }
 }
+
 
 
 @media (min-width: $sm-screen) {

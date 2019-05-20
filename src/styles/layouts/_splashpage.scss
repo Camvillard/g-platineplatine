@@ -140,6 +140,16 @@ form#landing-form {
     color: white;
     opacity: 1;
   }
+
+  input:active,
+  input:focus,
+  input:hover,
+  input:visited {
+    outline: none;
+    outline-offset: 0px;
+    border: 2px solid $dark-gray;
+    color: $dark-gray;
+  }
 }
 
 @media (min-width: $sm-screen) {
@@ -226,12 +236,6 @@ form#landing-form {
       font-size: 2.4rem;
       line-height: 1.25;
     }
-  }
-
-  #social-icons {
-    position: fixed;
-    right: 16px;
-    top: 16px;
   }
 
 

@@ -7,9 +7,9 @@ import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 // styles
 
 
-const Icons = () => {
+const Icons = (props) => {
   return(
-    <div id="social-icons">
+    <div id={props.id}>
       <div id="instagram" className="social-icon-white icon-aqua">
       <a href="https://instagram.com/plaatine" target="_blank" rel="noopener noreferrer">
         <FaInstagram />
