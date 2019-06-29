@@ -2,8 +2,8 @@
 import React from "react";
 
 // internal components
-import SEO from "../components/Seo";
-import Icons from "../components/Icons"
+import SEO from "../components/eeo";
+import Icons from "../components/icons"
 
 // images & assets
 import Logo from "../images/platine_logo-principal.svg";
