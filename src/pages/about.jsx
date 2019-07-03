@@ -1,7 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+// external libs
+import React from "react";
+import { Link } from "gatsby";
 
+// internal components
+
+// images & assets
 import SEO from "../components/seo"
+
+// styles
+
 
 const AboutPage = () => (
   <div>

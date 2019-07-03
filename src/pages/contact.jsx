@@ -1,7 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+// external libs
+import React from "react";
+import { Link} from "gatsby";
 
+// internal components
 import SEO from "../components/seo"
+
+// images & assets
+
+// styles
+
+
 
 const ContactPage = () => (
   <div>

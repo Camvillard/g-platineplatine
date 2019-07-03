@@ -1,6 +1,14 @@
-import React from "react"
+// external libs
+import React from "react";
+import { graphql } from "gatsby";
 
-import SEO from "../components/Seo.jsx"
+// internal components
+import SEO from "../components/seo.jsx"
+
+// images & assets
+
+// styles
+
 
 const NotFoundPage = () => (
   <div>

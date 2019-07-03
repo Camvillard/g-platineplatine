@@ -1,13 +1,15 @@
+// external libs
 import React from "react";
 
-
+// internal components
 import SEO from "../components/seo";
 
+// images & assets
 import Logo from "../images/platine-logo_v0.svg";
 import Cercle from "../images/cercle.svg";
 import Platine from "../images/platine.svg";
 
-
+// styles
 import '../styles/layouts/_splashpage.scss';
 import '../styles/layouts/_logo-animations.scss';
 
