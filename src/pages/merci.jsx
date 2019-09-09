@@ -2,7 +2,7 @@
 import React from "react";
 
 // internal components
-import SEO from "../components/eeo";
+import SEO from "../components/seo";
 import Icons from "../components/icons"
 
 // images & assets
