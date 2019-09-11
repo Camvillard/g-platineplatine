@@ -1,9 +1,13 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- COMPONENTS : CARDS ----- */
 
-@import "main";
-@import "homepage";
-@import "contact";
-@import "about";
+
+//  regular card : homepage & archives
+
+.regular-card {
+  &.pink {
+    background: $light-pink;
+  }
+}
 
 
 @media (min-width: $sm-screen) {

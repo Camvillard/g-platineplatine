@@ -1,10 +1,9 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- COMPONENTS : CONTAINERS----- */
 
-@import "main";
-@import "homepage";
-@import "contact";
-@import "about";
-
+.container {
+  width: 92vw;
+  margin: auto;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

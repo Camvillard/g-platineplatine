@@ -1,24 +1,26 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
+// external libs
 import React from "react";
+import { Link } from "gatsby";
 
-const Header = ({siteTitle, path}) => {
-  return (
-    <header id="site-header" >
-      <div>
-        {path === "homepage" ? <h1><Link to="/">{siteTitle}</Link></h1> : <h1>{siteTitle}</h1> }
-      </div>
-    </header>
-  )
+// internal stuff
+
+// styles & assets
+import Logo from "../images/platine_logo-principal.svg"
+
+class Header extends React.Component {
+  render(){
+    return(
+      <header>
+        <Logo />
+
+
+      </header>
+    )
+  }
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 
 export default Header
+

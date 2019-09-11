@@ -1,7 +1,6 @@
 // require('dotenv').config();
 const path = require('path');
 
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -23,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     query.then(result => {
       if (result.errors) {
-        console.error(results.errors)
+        console.error(result.errors)
         reject(result.error)
       }
 
@@ -66,7 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     query.then(result => {
       if (result.errors) {
-        console.error(results.errors)
+        console.error(result.errors)
         reject(result.error)
       }
 

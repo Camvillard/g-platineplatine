@@ -20,11 +20,11 @@ module.exports = {
     {
      resolve: `gatsby-source-wordpress`,
      options: {
-       baseUrl: process.env.GATSBY_WORDPRESS_BASE_URL,
-       protocol: process.env.GATSBY_WORDPRESS_PROTOCOL,
-       hostingWPCOM: (process.env.GATSBY_WORDPRESS_HOSTING_WPCOM === 'true'),
-       useACF: (process.env.GATSBY_WORDPRESS_USE_ACF === 'true'),
-       verboseOutput: (process.env.GATSBY_WORDPRESS_VERBOSE_OUTPUT === 'true'),
+       baseUrl: "contenu.platineplatine.com",
+       protocol: "https",
+       hostingWPCOM: false,
+       useACF: true,
+       verboseOutput: true,
        auth: {
          wpcom_app_clientSecret: process.env.GATSBY_WORDPRESS_CLIENT_SECRET,
          wpcom_app_clientId: process.env.GATSBY_WORDPRESS_CLIENT_ID,
@@ -32,12 +32,14 @@ module.exports = {
          wpcom_pass: process.env.GATSBY_WORDPRESS_PASSWORD,
        },
        includedRoutes: [
-         "**/posts",
-         "**/pages",
-         "**/tags",
+       "**/categories",
+       "**/posts",
+       "**/pages",
+       "**/comments",
+       "**/media",
        ],
      },
-     },
+    },
     // using svg
     {
         resolve: "gatsby-plugin-react-svg",

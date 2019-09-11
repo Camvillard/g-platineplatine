@@ -3,9 +3,13 @@
 @import url("https://use.typekit.net/jwd5yhl.css");
 
 
-$body-font: 'muli', sans-serif;
-$headers-font: 'acumin-pro-extra-condensed', sans-serif;
+$body-font: 'muli', sans-serif;  // 300, 400,  600
+$headers-font: 'acumin-pro-extra-condensed', sans-serif; //800, 400
 $accent-font: 'acumin-pro-extra-condensed', sans-serif;
+
+html {
+  font-size: 62.5%;
+}
 
 body {
   font-family: $body-font;
