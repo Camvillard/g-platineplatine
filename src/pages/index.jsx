@@ -21,7 +21,7 @@ const IndexPage = ({data}) => {
     <React.Fragment>
       <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
-      <p>todo</p>
+      <Header />
 
     </React.Fragment>
   )

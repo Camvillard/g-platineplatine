@@ -1,17 +1,31 @@
 /*----- COMPONENTS : BUTTONS ----- */
 
 
-// @import "../variables/index";
-// @import "../mixins/buttons";
+@import "../mixins/buttons";
 
-// .button-aqua{
-//   @include button($aqua, $aqua, white);
-// }
+.button-aqua{
+  @include button($aqua, $aqua, white);
+}
 
-// .button-white {
-//   @include button(white, $aqua, $aqua);
-// }
+.button-white {
+  @include button(white, $aqua, $aqua);
+}
 
+
+.button {
+  font-family: $accent-font;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 2rem;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+// simple button
+
+.simple-button {
+  border-bottom: 3px solid $dark-gray;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

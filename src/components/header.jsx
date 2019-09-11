@@ -11,8 +11,7 @@ class Header extends React.Component {
   render(){
     return(
       <header>
-        <Logo />
-
+        <Logo className="logo" />
 
       </header>
     )

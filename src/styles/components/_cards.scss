@@ -4,8 +4,67 @@
 //  regular card : homepage & archives
 
 .regular-card {
+  padding: 16px;
+  margin-top: 72px;
   &.pink {
     background: $light-pink;
+  }
+  &.yellow {
+    background: $bright-yellow;
+  }
+  &.aqua {
+    background: $aqua;
+  }
+  &.blue {
+    background: $bright-blue;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -68px;
+    margin-bottom: 6px;
+  }
+
+  .card-icon {
+    background: $bright-yellow;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-icon svg {
+    width: 60%;
+  }
+
+  .card-icon svg path{
+    stroke: white !important;
+    fill: white !important;
+  }
+
+  .header-meta {
+    margin-left: 16px;
+  }
+
+  .meta {
+    margin: 0;
+    font-family: $accent-font;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .meta-content  {
+    font-weight: 300;
+  }
+
+  .card-title {
+    margin-top: 0.2em;
+    line-height: 1.2;
   }
 }
 
@@ -17,6 +76,11 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  //  regular card : homepage & archives
+
+  .regular-card {
+    padding: 20px;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
