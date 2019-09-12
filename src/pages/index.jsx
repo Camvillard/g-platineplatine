@@ -28,27 +28,25 @@ const IndexPage = ({data}) => {
 
         <div className="homepage-section last-article-section">
 
-        <div className="last-article-card">
+          <div className="last-article-card">
 
-          <div className="last-article-box">
-            <p className="uppercased-text">le dernier article</p>
-            <h3 className="card-title">comment se remettre à lire après un passage à vide ?</h3>
-            <div className="header-meta">
-              <p className="meta uppercased-text">publié le : 24/10/2019</p>
-              <p className="meta uppercased-text">dans le jukebox</p>
+            <div className="last-article-box">
+              <p className="uppercased-text">le dernier article</p>
+              <h3 className="card-title">comment se remettre à lire après un passage à vide ?</h3>
+              <div className="header-meta">
+                <p className="meta uppercased-text">publié le : 24/10/2019</p>
+                <p className="meta uppercased-text">dans le jukebox</p>
+              </div>
             </div>
+            {/* end of .last-article-box */}
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button button-aqua more-link"><span>lire la suite</span></Link>
+            </div>
+
           </div>
-          {/* end of .last-article-box */}
-
-          <div className="card-content">
-            <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
-            <h3 className="card-title">Comment soutenir les artistes que vous appréciez ?</h3>
-            <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis (...)</p>
-            <Link to="/" className="button button-aqua more-link"><span>lire la suite</span></Link>
-          </div>
-
-        </div>
-
 
         </div>
 
@@ -57,36 +55,159 @@ const IndexPage = ({data}) => {
 
       <div className="container">
 
-      <div className="homepage-section articles-section">
+        <div className="homepage-section articles-section">
 
+          <div className="regular-card pink">
 
-        <div className="regular-card pink">
-
-          <div className="card-header">
-            <div className="card-icon"><Music /></div>
-            <div className="header-meta">
-              <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
-              <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
             </div>
-          </div>
 
-          <div className="card-content">
-            <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
-            <h3 className="card-title">Comment soutenir les artistes que vous appréciez ?</h3>
-            <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis (...)</p>
-            <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
           </div>
+          {/* end of .regular-card */}
+
+          <div className="regular-card yellow">
+
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
+            </div>
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
+          </div>
+          {/* end of .regular-card */}
+
+          <div className="regular-card blue">
+
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
+            </div>
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
+          </div>
+          {/* end of .regular-card */}
+
+          <div className="regular-card aqua">
+
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
+            </div>
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
+          </div>
+          {/* end of .regular-card */}
 
         </div>
-        {/* end of .regular-card */}
-
-      </div>
-
-
-
+        {/* end of .homepage-section.articles-section */}
 
       </div>
       {/* end of .container */}
+
+      <div className="homepage-section newsletter-section">
+        <h3 className="section-title">s'inscrire à la newsletter</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae dolore rerum, neque mollitia, laborum nam at. Ad, alias illum enim nemo magnam sint eligendi consequuntur, voluptatum quia labore ullam.</p>
+
+        <MailChimpForm />
+
+      </div>
+      {/* end of .newsletter-section */}
+
+
+      <div className="container">
+
+        <div className="homepage-section articles-section">
+
+          <div className="regular-card pink">
+
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
+            </div>
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
+          </div>
+          {/* end of .regular-card */}
+
+
+          <div className="regular-card blue">
+
+            <div className="card-header">
+              <div className="card-icon"><Music /></div>
+              <div className="header-meta">
+                <p className="meta">publié le : <span className="meta-content">24/10/2019</span></p>
+                <p className="meta">dans <span className="meta-content">le jukebox</span></p>
+              </div>
+            </div>
+
+            <div className="card-content">
+              <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
+              <h3 className="card-title">Comment soutenir les artistes que vous appréciez&nbsp;?</h3>
+              <p className="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis, vitae fugiat, tenetur aperiam deleniti saepe sunt quidem illum similique, asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. asperiores rerum aliquam tempora iure, ipsam quis praesentium accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint id veritatis&nbsp;(...)</p>
+              <Link to="/" className="button simple-button more-link"><span>lire la suite</span></Link>
+            </div>
+
+          </div>
+          {/* end of .regular-card */}
+
+
+        </div>
+        {/* end of .homepage-section.articles-section */}
+
+      </div>
+      {/* end of .container */}
+
+
+
+
 
     </React.Fragment>
   )
