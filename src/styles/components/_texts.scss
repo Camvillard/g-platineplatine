@@ -35,6 +35,11 @@ p {
   font-size: 1.4rem;
 }
 
+.uppercased-text {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
