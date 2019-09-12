@@ -1,6 +1,39 @@
 /*----- COMPONENTS : CARDS ----- */
 
 
+// last article - only for homepage
+
+
+.last-article-card {
+  margin-bottom: 32px;
+
+  .last-article-box {
+    background: $aqua;
+    padding: 16px 24px 24px;
+  }
+
+  .header-meta {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .meta {
+    text-align: center;
+    margin: 0;
+  }
+
+  .card-content {
+    width: calc(100vw - 48px);
+    margin: -24px auto 24px;
+  }
+
+  .card-content .card-excerpt {
+    margin-bottom: 24px;
+  }
+
+}
+
+
+
 //  regular card : homepage & archives
 
 .regular-card {
@@ -8,15 +41,27 @@
   margin-top: 72px;
   &.pink {
     background: $light-pink;
+    .card-icon {
+      background: $aqua;
+    }
   }
   &.yellow {
     background: $bright-yellow;
+    .card-icon {
+      background: $bright-blue;
+    }
   }
   &.aqua {
     background: $aqua;
+    .card-icon {
+      background: $bright-yellow;
+    }
   }
   &.blue {
     background: $bright-blue;
+    .card-icon {
+      background: $light-pink;
+    }
   }
 
   .card-header {
@@ -28,7 +73,6 @@
   }
 
   .card-icon {
-    background: $bright-yellow;
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -47,7 +91,8 @@
   }
 
   .header-meta {
-    margin-left: 16px;
+    margin-left: 10px;
+    margin-bottom: 4px;
   }
 
   .meta {
@@ -60,6 +105,21 @@
 
   .meta-content  {
     font-weight: 300;
+    margin-left: 4px;
+  }
+
+  .card-content {
+    background: white;
+    padding: 16px;
+  }
+
+  .card-content .card-excerpt {
+    margin-bottom: 24px;
+  }
+
+  .card-content .more-link {
+    display: block;
+    text-align: right;
   }
 
   .card-title {

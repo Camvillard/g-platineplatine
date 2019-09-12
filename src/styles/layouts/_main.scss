@@ -62,6 +62,17 @@ a {
 
 
 
+// only for dev purposes
+
+
+.small-title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.small-title span {
+  background: $aqua;
+}
+
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 

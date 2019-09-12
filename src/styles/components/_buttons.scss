@@ -5,6 +5,14 @@
 
 .button-aqua{
   @include button($aqua, $aqua, white);
+  &:focus {
+    @include button-focus;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
 }
 
 .button-white {
@@ -19,13 +27,29 @@
   font-size: 2rem;
   color: $dark-gray;
   font-weight: 600;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+  }
 }
+
+.button-block {
+  display: block;
+  margin: 16px 0;
+}
+
+
 
 // simple button
 
-.simple-button {
+.simple-button span{
   border-bottom: 3px solid $dark-gray;
 }
+
+.simple-button:hover span{
+  border-bottom: 3px solid $aqua;
+}
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
