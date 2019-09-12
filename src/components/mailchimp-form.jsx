@@ -41,12 +41,16 @@ class MailChimpForm extends React.Component {
     })
   };
 
+  addCompleted = (e) => {
+    e.target.classList.add('completed')
+  }
+
   render() {
     return(
-      <form onSubmit={this.handleSubmit} id={this.props.id}>
-        <input type="text" name="name" placeholder="prénom :" onChange={this.handleChange} />
-        <input type="email" name="email" placeholder="adresse mail :" onChange={this.handleChange}/>
-        <button type="submit">envoyer</button>
+      <form onSubmit={this.handleSubmit} id={this.props.id} className="form-stroked dark">
+        <input type="text" name="name" placeholder="prénom :" onChange={this.handleChange} onBlur={this.addCompleted}/>
+        <input type="email" name="email" placeholder="adresse mail :" onChange={this.handleChange} onBlur={this.addCompleted}/>
+        <button className="button simple-button"><span>envoyer</span></button>
       </form>
     )
   }

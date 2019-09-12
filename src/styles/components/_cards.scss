@@ -27,7 +27,13 @@
   }
 
   .card-content .card-excerpt {
+    margin-top: 0;
     margin-bottom: 24px;
+  }
+
+  .card-title {
+    margin-top: 0;
+    line-height: 1.1;
   }
 
 }
@@ -37,7 +43,7 @@
 //  regular card : homepage & archives
 
 .regular-card {
-  padding: 16px;
+  padding: 18px 12px 12px 12px;
   margin-top: 72px;
   &.pink {
     background: $light-pink;
@@ -110,7 +116,7 @@
 
   .card-content {
     background: white;
-    padding: 16px;
+    padding: 12px;
   }
 
   .card-content .card-excerpt {
@@ -120,11 +126,13 @@
   .card-content .more-link {
     display: block;
     text-align: right;
+    margin-right: 6px;
+    margin-bottom: 6px;
   }
 
   .card-title {
-    margin-top: 0.2em;
-    line-height: 1.2;
+    margin-top: 0;
+    line-height: 1;
   }
 }
 
