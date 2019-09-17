@@ -149,7 +149,7 @@
 
   .last-article-card {
     margin-top: 120px;
-    margin-bottom: 32px;
+    margin-bottom: 88px;
 
     .last-article-box {
       width: 50%;
@@ -167,24 +167,22 @@
     }
 
     .card-content {
-      width: 80%;
-      margin: -244px auto 24px;
-    }
-
-    .card-content img {
-      // width: 70%;
-      // margin-left: 15%;
+      width: 90%;
+      margin: -244px auto 24px 10%;
     }
 
     .card-content .card-excerpt {
-      margin-top: 0;
-      margin-bottom: 24px;
+      width: 80%;
+      margin-left: 20%;
+    }
+
+    .card-excerpt  div {
+      margin-bottom: 32px;
     }
 
     .card-title {
-      text-align:  center;
+      text-align: center;
     }
-
   }
   //  regular card : homepage & archives
 

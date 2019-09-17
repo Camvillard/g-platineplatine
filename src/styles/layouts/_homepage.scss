@@ -8,6 +8,7 @@
 .newsletter-section  {
   background: $light-pink;
   padding: 24px 4vw;
+  width: 100vw;
 
   .form-stroked {
     width: 100%;
@@ -22,10 +23,20 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
-  .homepage-section {
+  .container {
     width: 80vw;
     max-width: 1080px;
     margin: auto;
+  }
+
+  .last-article-section {
+    width: 72%;
+    margin: auto;
+  }
+
+  .newsletter-section  {
+    width: 100vw;
+    padding: 24px 24%;
   }
 
   .articles-section {
