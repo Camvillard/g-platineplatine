@@ -12,9 +12,18 @@ import Layout from "../components/layout"
 import '../styles/main.scss';
 
 class Post extends React.Component {
+
+  setFeaturedImage = (post) => {
+    if (post.featured_media) {
+      return post.featured_media.source_url
+    } else {
+      return "https://contenu.platineplatine.com/wp-content/uploads/2019/09/placeholder-2.png"
+    }
+  }
+
   render() {
     const post = this.props.data.wordpressPost
-    const featuredImage = post.featured_media.source_url
+    const featuredImage = this.setFeaturedImage(post)
     return(
       <Layout>
 
