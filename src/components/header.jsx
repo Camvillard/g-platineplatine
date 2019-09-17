@@ -1,6 +1,6 @@
 // external libs
 import React from "react";
-import { Link } from "gatsby";
+
 
 // internal stuff
 
@@ -12,7 +12,6 @@ class Header extends React.Component {
     return(
       <header>
         <Logo className="logo" />
-
       </header>
     )
   }

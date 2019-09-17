@@ -3,7 +3,6 @@
 
 // last article - only for homepage
 
-
 .last-article-card {
   margin-bottom: 32px;
 
@@ -16,6 +15,7 @@
     margin-top: 16px;
     margin-bottom: 16px;
   }
+
   .meta {
     text-align: center;
     margin: 0;
@@ -144,6 +144,48 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+
+  // last article - only for homepage
+
+  .last-article-card {
+    margin-top: 120px;
+    margin-bottom: 32px;
+
+    .last-article-box {
+      width: 50%;
+      height: 430px;
+    }
+
+    .header-meta {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      text-align: center;
+      margin: 0;
+    }
+
+    .card-content {
+      width: 80%;
+      margin: -244px auto 24px;
+    }
+
+    .card-content img {
+      // width: 70%;
+      // margin-left: 15%;
+    }
+
+    .card-content .card-excerpt {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    .card-title {
+      text-align:  center;
+    }
+
+  }
   //  regular card : homepage & archives
 
   .regular-card {
