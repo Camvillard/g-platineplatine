@@ -1,0 +1,39 @@
+/*----- COMPONENTS : FOOTER ----- */
+
+footer {
+  background: $aqua;
+  text-align: center;
+  padding: 4px;
+
+
+  p, a {
+    font-family: $headers-font;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $dark-gray;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+
+  .left-section {
+    margin-bottom: 8px;
+  }
+
+  .left-section  a {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

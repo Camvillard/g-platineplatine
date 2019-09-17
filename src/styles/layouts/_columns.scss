@@ -1,0 +1,46 @@
+/*----- LAYOUTS : COLUMNS ----- */
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+
+  .columns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .column {
+    flex-grow: 0;
+    padding: 8px;
+  }
+
+
+  .one-half {
+    width: 50%;
+  }
+
+  .one-third {
+    width: 33.333%;
+  }
+
+  .one-fourth {
+    width: 25%;
+  }
+
+  .three-fourth {
+    width: 75%;
+  }
+
+  .one-fifth {
+    width: 20%;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

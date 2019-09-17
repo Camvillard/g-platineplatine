@@ -1,16 +1,26 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
  return(
- <div>
-   © {new Date().getFullYear()}, built with
-   <FontAwesomeIcon icon="heart" />
-   {` `}
-   <a href="https://www.gatsbyjs.org">Gatsby</a>
- </div>)
+   <footer className="columns">
+
+     <div className="column one-fourth left-section">
+       <p className="footer-copyright">
+        © {new Date().getFullYear()} Platine
+       </p>
+       <Link to="#">politique de confidentialité</Link>
+       <Link to="#">mentions légales</Link>
+     </div>
+
+     <div className="column three-fourth right-section">
+      <p>direction artistique + développement web par <a href="https://www.cdltbisou.com">cdltbisou</a></p>
+     </div>
+
+   </footer>
+ )
 }
 
 export default Footer;
