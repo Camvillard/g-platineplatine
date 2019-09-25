@@ -1,6 +1,7 @@
 // external libs
 import React from "react";
 import { graphql, Link } from "gatsby";
+import Slider from "react-slick";
 
 // internal components
 import SEO from "../components/seo";
@@ -20,9 +21,17 @@ import '../styles/main.scss';
 class IndexPage extends React.Component {
   render(){
     const allPosts = this.props.data.allWordpressPost.edges
+    const carouselPost = allPosts.slice(0,3)
     const firstSectionPosts = allPosts.slice(1, 5)
     const secondSectionPosts = allPosts.slice(6, 8)
     const lastPost = allPosts[0].node
+    const carouselSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
     return(
       <React.Fragment>
         <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
@@ -32,8 +41,13 @@ class IndexPage extends React.Component {
         <div className="fullwidth-container">
 
           <div className="homepage-section last-article-section">
+            <Slider {...carouselSettings}>
 
-            <LastPostCard post={lastPost} />
+              {carouselPost.map( post =>  {
+                return <LastPostCard key={post.node.id} post={post.node} />
+              })}
+            </Slider>
+
 
           </div>
 

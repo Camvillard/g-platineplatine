@@ -153,12 +153,13 @@
 
     .last-article-box {
       width: 50%;
-      height: 430px;
+      margin: auto;
+      padding: 24px;
     }
 
     .header-meta {
       margin-top: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 0px;
     }
 
     .meta {
@@ -168,7 +169,7 @@
 
     .card-content {
       width: 90%;
-      margin: -244px auto 24px 10%;
+      margin: 0px auto 24px;
     }
 
     .card-content .card-excerpt {
@@ -188,6 +189,10 @@
 
   .regular-card {
     padding: 20px;
+
+    .card-content {
+      padding: 20px;
+    }
   }
 } // end of lg-screen - 1200px
 

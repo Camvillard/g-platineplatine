@@ -37,6 +37,7 @@ module.exports = {
        "**/pages",
        "**/comments",
        "**/media",
+       "**/users",
        ],
      },
     },

@@ -22,25 +22,8 @@ import Images from "../images/icon-images.svg"
 class PostCard extends React.Component {
 
   setColorBackground = (post) => {
-    switch (post.categories[0].slug) {
-      case 'bibliotheque-livres':
-        return "aqua";
-        break;
-      case 'jukebox':
-        return "pink";
-        break;
-      case 'piecesdetheatre':
-        return "yellow";
-        break;
-      case 'podcasts':
-        return "blue";
-        break;
-      case 'expos':
-        return "pink";
-        break;
-      default:
-        console.log('missing category');
-    }
+    const colors = ["aqua", "pink", "yellow", "blue"]
+    return colors[Math.floor(Math.random() * colors.length)]
   };
 
   setIcon = (post) => {
@@ -62,6 +45,7 @@ class PostCard extends React.Component {
         break;
       default:
         console.log('missing category');
+        return <Music />;
     }
   }
 
@@ -87,7 +71,7 @@ class PostCard extends React.Component {
           <p className="card-excerpt">
             <span dangerouslySetInnerHTML= {{__html: post.excerpt}} />
           </p>
-          <Link to={post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>
+          <Link to={"/"+ post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>
         </div>
       </div>
 
