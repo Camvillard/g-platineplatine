@@ -1,22 +1,15 @@
 // external libs
 import React from "react";
 import { Link, StaticQuery, graphql } from 'gatsby';
+import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 
 // internal stuff
-// import SocialIcons from "./social-icons"
+
 // import SearchBar from "./search-bar"
 
 // import Search from "./search"
 
 
-
-// styles & assets
-
-// const searchIndices = [
-//   { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
-//   { name: `Posts`, title: `Articles`, hitComp: `PostHit` },
-//   { name: `Favoris`, title: `Favoris`, hitComp: `FavHit` },
-// ]
 
 class Navbar extends React.Component {
 
@@ -61,6 +54,13 @@ class Navbar extends React.Component {
                       <Link to={`/categories/${cat.node.slug}`}>{cat.node.name}</Link>
                     </li>
           })}
+          {this.state.isMobileNav && (
+            <div className="social-icons-links">
+              <FaInstagram />
+              <FaTwitter />
+              <FaFacebookF />
+            </div>
+          ) }
         </ul>
       </div>
     )

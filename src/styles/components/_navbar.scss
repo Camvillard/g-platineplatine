@@ -4,11 +4,6 @@
 
   .toggle-menu {
     position: fixed;
-    bottom: 0;
-    left:0;
-    right: 0;
-    z-index: 10000;
-    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,10 +15,18 @@
 
   .toggle-menu.opened {
     background: transparent;
+    top: 0;
+    right: 0;
+    z-index: 1003;
   }
 
   .toggle-menu.closed {
     background: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    z-index: 1000;
   }
 
   .nav-links {
@@ -52,12 +55,23 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1002;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background: $bright-yellow;
+  }
+
+  .social-icons-links {
+    display: flex;
+    margin-top: 32px;
+  }
+
+  .social-icons-links svg {
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
   }
 }
 
