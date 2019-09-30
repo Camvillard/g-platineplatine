@@ -98,16 +98,12 @@ class IndexPage extends React.Component {
 
           <div className="homepage-section about-section">
 
-            <div className="section-content">
-
               <h3>à propos de platine</h3>
               <p>Come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback.So thirsty, deluminator firs’ years follow me 12 inches of parchment.
               </p>
               <Link to="/" className="button simple-button more-link">
                 <span>en savoir plus</span>
               </Link>
-
-            </div>
 
           </div>
 
