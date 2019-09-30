@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo"
-
 import Music from "../images/icon-music.svg"
 
 // styles
@@ -75,11 +73,11 @@ class Styles extends React.Component {
 
 
           <div className="button-block">
-            <a href="#"className="button button-aqua"><span>bouton principal</span></a>
+            <a href="/" className="button button-aqua"><span>bouton principal</span></a>
           </div>
 
           <div className="button-block">
-            <a href="#"className="button simple-button"><span>bouton simple</span></a>
+            <a href="/" className="button simple-button"><span>bouton simple</span></a>
           </div>
 
 

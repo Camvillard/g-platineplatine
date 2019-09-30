@@ -6,25 +6,25 @@ import Slider from "react-slick";
 // internal components
 import SEO from "../components/seo";
 import Header from "../components/header";
-import Icons from "../components/icons"
+import Navbar from "../components/navbar";
 import MailChimpForm from "../components/mailchimp-form";
 import LastPostCard from "../components/last-post";
 import PostCard from "../components/post-card";
 
 // images & assets
-import Logo from "../images/platine_logo-principal.svg";
-
 
 // styles
 import '../styles/main.scss';
 
 class IndexPage extends React.Component {
   render(){
+    const pageData = this.props.data.wordpressPage.acf
+    console.log(pageData)
     const allPosts = this.props.data.allWordpressPost.edges
     const carouselPost = allPosts.slice(0,3)
     const firstSectionPosts = allPosts.slice(1, 5)
     const secondSectionPosts = allPosts.slice(6, 8)
-    const lastPost = allPosts[0].node
+    // const lastPost = allPosts[0].node
     const carouselSettings = {
       dots: true,
       infinite: true,
@@ -37,6 +37,7 @@ class IndexPage extends React.Component {
         <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
         <Header />
+        <Navbar />
 
         <div className="fullwidth-container">
 
@@ -133,26 +134,38 @@ query homePage {
   allWordpressPost(
   limit: 8,
   sort: {fields: [date], order: [DESC] }
-  ) {
-      edges {
-        node {
+  ){
+    edges {
+      node {
+        id
+        slug
+        featured_media {
+          source_url
+        }
+        title
+        excerpt
+        date(formatString: "DD/MM/YYYY" )
+        categories {
           id
           slug
-          featured_media {
-            source_url
-          }
-          title
-          excerpt
-          date(formatString: "DD/MM/YYYY" )
-          categories {
-            id
-            slug
-            name
-          }
-
+          name
         }
+
       }
     }
+  }
+  wordpressPage(title: {eq: "homepage"}) {
+    acf {
+      a_propos
+      en_ce_moment {
+        url
+      }
+      en_ce_moment_lien
+      en_ce_moment_text
+      newsletter_title
+      en_ce_moment_text
+    }
+  }
 }
 `
 

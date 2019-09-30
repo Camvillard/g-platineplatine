@@ -1,10 +1,21 @@
 /*----- COMPONENTS : NAVBAR ----- */
 
+.mobile-navbar {
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index: 10000;
 
-.main-header {
-  background: #000;
+  .hide-links {
+    display: none;
+  }
+
+  .show-links {
+    display: flex;
+  }
 }
-
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

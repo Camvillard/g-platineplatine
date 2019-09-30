@@ -3,7 +3,9 @@
 .logo {
   display: block;
   width: 60%;
-  margin: auto;
+  height: 60%;
+  max-width: 320px;
+  margin: 16px auto 24px;
 }
 
 @media (min-width: $sm-screen) {
@@ -13,6 +15,12 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .logo {
+    display: block;
+    width: 60%;
+    max-width: 320px;
+    margin: auto;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

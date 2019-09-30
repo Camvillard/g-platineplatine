@@ -1,10 +1,19 @@
 /*----- COMPONENTS : ICONS ----- */
 
 
-#social-icons {
-  position: relative;
+// #social-icons {
+//   position: relative;
+//   width: 80px;
+//   height: 64px;
+// }
+
+.social-icons {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
   width: 80px;
   height: 64px;
+  z-index: 100000;
 }
 
 .social-icon-white {
@@ -38,22 +47,22 @@
 
 #instagram {
   position: absolute;
-  top: 0;
-  left: 18px;
+  bottom: 0;
+  right: 20px;
   z-index: 4;
 }
 
 #twitter {
   position: absolute;
-  right: 0;
-  top: 19px;
+  right: 12px;
+  bottom: 28px;
   z-index: 3;
 }
 
 #facebook {
   position: absolute;
-  left: 0;
-  bottom: 4px;
+  right: 38px;
+  bottom: 16px;
   z-index: 2;
 }
 
@@ -65,10 +74,12 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
-  #social-icons {
-    position: fixed ;
-    right: 16px;
-    top: 16px;
+  .social-icons {
+    position: relative;
+    width: 80px;
+    height: 64px;
+    margin-top: 24px;
+    margin-left: 24px;
   }
 } // end of lg-screen - 1200px
 

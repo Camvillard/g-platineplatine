@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Navbar from "./navbar"
 import Footer from "./footer"
 
 
@@ -19,7 +20,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <React.Fragment>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </React.Fragment>

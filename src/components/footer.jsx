@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 const Footer = () => {
  return(
    <footer className="columns">

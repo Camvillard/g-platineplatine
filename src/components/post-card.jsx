@@ -26,23 +26,29 @@ class PostCard extends React.Component {
     return colors[Math.floor(Math.random() * colors.length)]
   };
 
+  setIconBackground = (color) => {
+    const allColors = ["aqua", "pink", "yellow", "blue"]
+    const selectedColors = []
+    allColors.forEach( c => {
+      if (c !== color) {
+        selectedColors.push(c)
+      }
+    })
+    return selectedColors[Math.floor(Math.random() * selectedColors.length)];
+  }
+
   setIcon = (post) => {
     switch (post.categories[0].slug) {
       case 'jukebox':
         return <Music />;
-        break;
       case 'bibliotheque-livres':
         return <Book />;
-        break;
       case 'piecesdetheatre':
         return <Images />;
-        break;
       case 'podcasts':
         return <Podcast />;
-        break;
       case 'expos':
         return <Images />;
-        break;
       default:
         console.log('missing category');
         return <Music />;
@@ -52,11 +58,12 @@ class PostCard extends React.Component {
   render() {
     const post = this.props.post
     const backgroundColor = this.setColorBackground(post)
+    const iconBackgroundColor = this.setIconBackground(backgroundColor)
     return(
       <div className={`regular-card ` + backgroundColor}>
 
         <div className="card-header">
-          <div className="card-icon">{this.setIcon(post)}</div>
+          <div className={`card-icon ` + iconBackgroundColor}>{this.setIcon(post)}</div>
           <div className="header-meta">
             <p className="meta">publié le : <span className="meta-content">{post.date}</span></p>
             <p className="meta">dans <span className="meta-content">{post.categories[0].name}</span></p>

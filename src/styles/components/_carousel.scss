@@ -162,7 +162,7 @@
 }
 
 .slick-prev {
-    left: -25px;
+    left: 80px;
 }
 [dir='rtl'] .slick-prev {
     right: -25px;
@@ -176,7 +176,7 @@
 }
 
 .slick-next {
-    right: -25px;
+    right: 80px;
 }
 [dir='rtl'] .slick-next {
     right: auto;
@@ -246,18 +246,18 @@
     opacity: 1;
 }
 .slick-dots li button:before {
-    font-family: 'slick';
-    font-size: 6px;
     line-height: 20px;
 
     position: absolute;
     top: 0;
     left: 0;
 
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
 
-    content: 'â€¢';
+    content: '';
     text-align: center;
 
     opacity: .25;

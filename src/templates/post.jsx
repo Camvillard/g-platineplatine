@@ -1,6 +1,6 @@
 // external libs
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 // internal components
 import Layout from "../components/layout"

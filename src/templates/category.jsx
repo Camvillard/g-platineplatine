@@ -1,15 +1,16 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import SEO from '../components/seo';
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 
 
 class Category extends React.Component {
   render() {
+    const category = this.props.data.wordpressCategory
     return(
       <React.Fragment>
-        TODO
+        <SEO title={`Archives pour la catégorie ${category.name}`} keywords={[`platine`, `culture`, `musique`, `livres`]} />
       </React.Fragment>
     )
   }

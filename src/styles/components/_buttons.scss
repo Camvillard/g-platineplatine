@@ -42,6 +42,10 @@
 
 // simple button
 
+.simple-button:hover {
+  color: $aqua;
+}
+
 .simple-button span{
   border-bottom: 3px solid $dark-gray;
 }

@@ -5,11 +5,9 @@
 
 .last-article-card {
   margin-bottom: 32px;
+  background: $aqua;
+  padding: 16px 24px 24px;
 
-  .last-article-box {
-    background: $aqua;
-    padding: 16px 24px 24px;
-  }
 
   .header-meta {
     margin-top: 16px;
@@ -23,7 +21,7 @@
 
   .card-content {
     width: calc(100vw - 48px);
-    margin: -24px auto 24px;
+    margin: 8px auto 24px;
   }
 
   .card-content .card-excerpt {
@@ -33,11 +31,11 @@
 
   .card-title {
     margin-top: 0;
-    line-height: 1.1;
+    font-size: 2.4rem;
+    line-height: 1;
   }
 
 }
-
 
 
 //  regular card : homepage & archives
@@ -47,27 +45,28 @@
   margin-top: 72px;
   &.pink {
     background: $light-pink;
-    .card-icon {
-      background: $aqua;
-    }
   }
   &.yellow {
     background: $bright-yellow;
-    .card-icon {
-      background: $bright-blue;
-    }
   }
   &.aqua {
     background: $aqua;
-    .card-icon {
-      background: $bright-yellow;
-    }
   }
   &.blue {
     background: $bright-blue;
-    .card-icon {
-      background: $light-pink;
-    }
+  }
+
+  .card-icon.blue {
+    background: $bright-blue;
+  }
+  .card-icon.aqua {
+    background: $aqua;
+  }
+  .card-icon.yellow {
+    background: $bright-yellow;
+  }
+  .card-icon.pink {
+    background: $light-pink;
   }
 
   .card-header {
@@ -149,7 +148,6 @@
 
   .last-article-card {
     margin-top: 120px;
-    margin-bottom: 88px;
 
     .last-article-box {
       width: 50%;

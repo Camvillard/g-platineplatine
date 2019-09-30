@@ -24,14 +24,23 @@ class Navbar extends React.Component {
     super(props)
     this.state = {
       dropdownIsActive: false,
+      isMobileNav: false
     }
   };
 
   toggleDropdownMenu = () => {
     this.setState({
-      dropdownIsActive: true
+      dropdownIsActive: !this.state.dropdownIsActive
     })
   };
+
+  componentDidMount() {
+    if (window && window.innerWidth < 768) {
+      this.setState({
+        isMobileNav: true
+      })
+    }
+  }
 
 
   render(){
@@ -39,9 +48,19 @@ class Navbar extends React.Component {
     // and build the menu with it
     const categories = this.props.data.allWordpressCategory.edges
     return(
-      <div className="navbar main-navbar">
-        <ul className="nav-links">
-          {categories.map( cat => <li key={cat.node.slug}><Link to={`/categories/${cat.node.slug}`}></Link></li>)}
+      <div className={`navbar main-navbar ${this.state.isMobileNav ? 'mobile-navbar' : 'desktop-navbar'}`}>
+
+        {this.state.isMobileNav &&
+          <div className="toggle-menu" onClick={this.toggleDropdownMenu}>
+            {this.state.dropdownIsActive ? 'fermer' : 'menu'}
+          </div> }
+
+        <ul className={`nav-links ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'}`}>
+          {categories.map( cat =>  {
+            return <li key={cat.node.slug}>
+                      <Link to={`/categories/${cat.node.slug}`}>{cat.node.name}</Link>
+                    </li>
+          })}
         </ul>
       </div>
     )
