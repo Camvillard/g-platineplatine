@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Navbar from "../components/navbar";
+import Instagram from "../components/instagram";
 import MailChimpForm from "../components/mailchimp-form";
 import LastPostCard from "../components/last-post";
 import PostCard from "../components/post-card";
@@ -109,6 +110,7 @@ class IndexPage extends React.Component {
 
         </div>
         {/* end of .fullwidth-container */}
+        <Instagram />
 
       </React.Fragment>
 

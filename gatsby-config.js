@@ -50,6 +50,12 @@ module.exports = {
           }
         }
       },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `entrenoslevres`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
