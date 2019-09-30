@@ -68,8 +68,8 @@ class IndexPage extends React.Component {
         {/* end of .container */}
 
         <div className="homepage-section newsletter-section">
-          <h3 className="section-title">s'inscrire à la newsletter</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae dolore rerum, neque mollitia, laborum nam at. Ad, alias illum enim nemo magnam sint eligendi consequuntur, voluptatum quia labore ullam.</p>
+          <h3 className="section-title">la newsletter collaborative de platine</h3>
+          <p>Un rendez-vous, tous les 15 jours, pour se raconter des petites histoires, partager ensemble nos dernières découvertes rayons livres et musique et tomber amoureux de nouveaux artistes. </p>
 
           <MailChimpForm />
 
@@ -83,7 +83,10 @@ class IndexPage extends React.Component {
 
           { secondSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
 
-            <Link to="/" className="button simple-button more-link"><span>lire tous les articles</span></Link>
+          <div className="more-link-container">
+            <Link to="/" className="button button-aqua more-link">lire tous les articles</Link>
+          </div>
+
 
           </div>
           {/* end of .homepage-section.articles-section */}
@@ -95,11 +98,7 @@ class IndexPage extends React.Component {
 
           <div className="homepage-section about-section">
 
-            <div className="left-section">
-              en ce moment
-            </div>
-
-            <div className="right-section">
+            <div className="section-content">
 
               <h3>à propos de platine</h3>
               <p>Come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback.So thirsty, deluminator firs’ years follow me 12 inches of parchment.

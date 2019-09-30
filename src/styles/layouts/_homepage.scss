@@ -16,6 +16,16 @@
 
 }
 
+.more-link-container {
+  width: 62%;
+  margin: 24px auto;
+}
+
+.about-section {
+  background: $bright-yellow;
+  padding: 24px;
+}
+
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 
