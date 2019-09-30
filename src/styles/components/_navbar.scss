@@ -1,19 +1,63 @@
 /*----- COMPONENTS : NAVBAR ----- */
 
 .mobile-navbar {
-  background: white;
-  position: fixed;
-  bottom: 0;
-  left:0;
-  right: 0;
-  z-index: 10000;
+
+  .toggle-menu {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 10000;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $headers-font;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .toggle-menu.opened {
+    background: transparent;
+  }
+
+  .toggle-menu.closed {
+    background: white;
+  }
+
+  .nav-links {
+    margin: 0;
+    list-style: none;
+    padding-left: 2vw;
+
+    a  {
+      color: $dark-gray;
+      text-transform: uppercase;
+      font-size: 4.8rem;
+      font-family: $headers-font;
+      font-weight: 800;
+    }
+  }
 
   .hide-links {
     display: none;
+    height: 42px;
+    overflow: hidden;
   }
 
   .show-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: $bright-yellow;
   }
 }
 

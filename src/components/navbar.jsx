@@ -51,7 +51,7 @@ class Navbar extends React.Component {
       <div className={`navbar main-navbar ${this.state.isMobileNav ? 'mobile-navbar' : 'desktop-navbar'}`}>
 
         {this.state.isMobileNav &&
-          <div className="toggle-menu" onClick={this.toggleDropdownMenu}>
+          <div className={`toggle-menu ${this.state.dropdownIsActive ? 'opened' : 'closed'}`} onClick={this.toggleDropdownMenu}>
             {this.state.dropdownIsActive ? 'fermer' : 'menu'}
           </div> }
 
