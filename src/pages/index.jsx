@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
         <Header />
         <Navbar />
 
-        <div className="fullwidth-container">
+        <div className="large-container">
 
           <div className="homepage-section last-article-section">
             <Slider {...carouselSettings}>

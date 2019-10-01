@@ -1,4 +1,4 @@
-/*----- LAYOUTS : MAIN ----- */
+/*----- LAYOUTS : GENERAL ----- */
 
 
 html {
@@ -58,6 +58,31 @@ a {
     cursor: pointer;
     outline-width: 0;
   }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.accent-text, em {
+  font-family: $accent-font;
+  text-transform: uppercase;
+}
+
+.accent-text-bold {
+  font-family: $accent-font;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 

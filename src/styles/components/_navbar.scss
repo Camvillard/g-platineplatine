@@ -23,8 +23,8 @@
 
   .toggle-menu.closed {
     background: white;
-    border-top: 1px solid $aqua;
-    height: 42px;
+    border-top: 2px solid $aqua;
+    height: 38px;
     z-index: 1000;
   }
 
@@ -62,12 +62,13 @@
     background: $bright-yellow;
   }
 
-  .social-icons-links {
+  .nav-social-icons {
     display: flex;
     margin-top: 32px;
+    position: fixed;
   }
 
-  .social-icons-links svg {
+  .nav-social-icons-links svg {
     width: 36px;
     height: 36px;
     margin-right: 24px;

@@ -55,7 +55,7 @@ class Navbar extends React.Component {
                     </li>
           })}
           {this.state.isMobileNav && (
-            <div className="social-icons-links">
+            <div className="nav-social-icons">
               <FaInstagram />
               <FaTwitter />
               <FaFacebookF />

@@ -3,6 +3,7 @@ import React from "react";
 import {Link} from "gatsby";
 
 // internal components
+import { createExcerpt } from "../utilities/cards";
 
 // images & assets
 
@@ -34,8 +35,8 @@ class LastPostCard extends React.Component {
         <div className="card-content">
           <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
           <div className="card-excerpt">
-            <div dangerouslySetInnerHTML= {{__html: post.excerpt}} />
-            <Link to={"/" + post.slug} className="button button-block button-aqua more-link"><span>lire la suite</span></Link>
+            <div dangerouslySetInnerHTML= {{__html: createExcerpt(post.excerpt)}} />
+            <Link to={"/" + post.slug} className="button button-block simple-button more-link"><span>lire la suite</span></Link>
           </div>
         </div>
       </div>
