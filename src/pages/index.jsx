@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
       slidesToScroll: 1
     }
     return(
-      <React.Fragment>
+      <div className="page-layout index-page">
         <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
         <Header />
@@ -112,7 +112,7 @@ class IndexPage extends React.Component {
         {/* end of .fullwidth-container */}
         <Instagram />
 
-      </React.Fragment>
+      </div>
 
 
     )

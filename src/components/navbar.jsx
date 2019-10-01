@@ -17,7 +17,8 @@ class Navbar extends React.Component {
     super(props)
     this.state = {
       dropdownIsActive: false,
-      isMobileNav: false
+      isMobileNav: false,
+      showSubLinks: false
     }
   };
 
@@ -26,6 +27,17 @@ class Navbar extends React.Component {
       dropdownIsActive: !this.state.dropdownIsActive
     })
   };
+
+  showSubLinks = (e) => {
+    if (document.querySelector('.rotate-link')) {
+      e.target.classList.remove('rotate-link')
+    } else {
+      e.target.classList.add('rotate-link')
+    }
+    this.setState({
+      showSubLinks: !this.state.showSubLinks
+    })
+  }
 
   componentDidMount() {
     if (window && window.innerWidth < 768) {
@@ -49,11 +61,15 @@ class Navbar extends React.Component {
           </div> }
 
         <ul className={`nav-links ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'}`}>
-          {categories.map( cat =>  {
-            return <li key={cat.node.slug}>
-                      <Link to={`/categories/${cat.node.slug}`}>{cat.node.name}</Link>
-                    </li>
-          })}
+          <li className="link-nav"><Link to="/categories/jukebox">le jukebox</Link></li>
+          <li className="link-nav"><Link to="/categories/bibliotheque">la bibliothèque</Link></li>
+          <li className="link-nav parent-link-nav" onClick={this.showSubLinks}>etc</li>
+          <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
+            <li className="link-nav"><Link to="/categories/podcasts">podcasts</Link></li>
+            <li className="link-nav"><Link to="/categories/expos">expos</Link></li>
+          </div>
+          <li className="link-nav"><Link to="/contact">contact</Link></li>
+          <li className="link-nav"><Link to="/contact">à propos</Link></li>
           {this.state.isMobileNav && (
             <div className="nav-social-icons">
               <FaInstagram />
