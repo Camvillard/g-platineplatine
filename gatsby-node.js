@@ -1,5 +1,7 @@
 // require('dotenv').config();
 const path = require('path');
+const createPaginatedPages = require('gatsby-paginate')
+
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -14,6 +16,20 @@ exports.createPages = ({ graphql, actions }) => {
               id
               slug
               wordpress_id
+              content
+              title
+              slug
+              date
+
+              categories {
+                name
+                slug
+              }
+
+              featured_media {
+                id
+                source_url
+              }
             }
           }
         }
@@ -25,6 +41,17 @@ exports.createPages = ({ graphql, actions }) => {
         console.error(result.errors)
         reject(result.error)
       }
+
+      createPaginatedPages({
+        edges: result.data.allWordpressPost.edges,
+        createPage: createPage,
+        pageTemplate: 'src/templates/archives.jsx',
+        pageLength: 8, // This is optional and defaults to 10 if not used
+        pathPrefix: 'archives',
+        buildPath: (index, pathPrefix) =>
+            index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and defaults to an empty string if not used
+        context: {}, // This is optional and defaults to an empty object if not used
+      })
 
       // grab the content pulled thanks to the graphql query
       const postEdges = result.data.allWordpressPost.edges

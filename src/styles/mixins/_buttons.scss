@@ -15,15 +15,7 @@
 @mixin button-hover {
   border-radius: 48px;
   color: white;
-}
-
-
-
-@mixin button-focus {
-  background: white;
   box-shadow: 0 0 8px rgba(157, 242, 214 ,0.8);
-  outline: none;
-  border-radius: 48px;
 }
 
 

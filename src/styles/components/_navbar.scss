@@ -4,6 +4,9 @@
 
   .toggle-menu {
     position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,16 +18,12 @@
 
   .toggle-menu.opened {
     background: transparent;
-    top: 0;
-    right: 0;
     z-index: 1003;
   }
 
   .toggle-menu.closed {
     background: white;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    border-top: 1px solid $aqua;
     height: 42px;
     z-index: 1000;
   }

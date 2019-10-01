@@ -9,11 +9,14 @@
 
 .social-icons {
   position: fixed;
-  bottom: 0px;
-  right: 0px;
-  width: 80px;
-  height: 64px;
+  bottom: 24px;
+  right: 16px;
+  // width: 80px;
+  // height: 64px;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icon-white {
@@ -22,12 +25,13 @@
   justify-content: center;
   color: white;
   padding: 4px;
-  width: 36px !important;
-  height: 36px !important;
+  margin: 0 4px;
+  width: 30px !important;
+  height: 30px !important;
   border-radius: 50%;
   a {
     color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 0;
     line-height: 1;
   }
@@ -45,26 +49,26 @@
   background: $bright-yellow;
 }
 
-#instagram {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  z-index: 4;
-}
+// #instagram {
+//   position: absolute;
+//   bottom: 0;
+//   right: 20px;
+//   z-index: 4;
+// }
 
-#twitter {
-  position: absolute;
-  right: 12px;
-  bottom: 28px;
-  z-index: 3;
-}
+// #twitter {
+//   position: absolute;
+//   right: 12px;
+//   bottom: 28px;
+//   z-index: 3;
+// }
 
-#facebook {
-  position: absolute;
-  right: 38px;
-  bottom: 16px;
-  z-index: 2;
-}
+// #facebook {
+//   position: absolute;
+//   right: 38px;
+//   bottom: 16px;
+//   z-index: 2;
+// }
 
 
 @media (min-width: $sm-screen) {

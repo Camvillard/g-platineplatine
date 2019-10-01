@@ -5,9 +5,6 @@
 
 .button-aqua{
   @include button($aqua, $aqua, white);
-  &:focus {
-    @include button-focus;
-  }
 
   &:hover {
     @include button-hover;

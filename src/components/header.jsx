@@ -1,5 +1,6 @@
 // external libs
 import React from "react";
+import { Link } from "gatsby";
 
 // internal stuff
 import Icons  from "./icons";
@@ -12,7 +13,11 @@ class Header extends React.Component {
     return(
       <header>
         <Icons id="navbar-icons" />
-        <Logo className="logo" />
+
+        <Link to="/">
+          <Logo className="logo" />
+        </Link>
+
       </header>
     )
   }

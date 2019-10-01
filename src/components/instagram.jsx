@@ -39,7 +39,7 @@ const Instagram = () => (
         <div className="instagram-footer">
           <h3>Platine sur Instagram</h3>
           <div className="instagram-images">
-            {data.allInstaNode.edges.map( d => <InstagramThumbnail image={d.node.original} /> )}
+            {data.allInstaNode.edges.map( d => <InstagramThumbnail key={d.node.id} image={d.node.original} /> )}
             <div className="subscribe-button">
               <a href="#" className="button button-block simple-button"><span>s'abonner</span></a>
             </div>
