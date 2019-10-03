@@ -78,11 +78,12 @@ exports.createPages = ({ graphql, actions }) => {
   const createWpCategories = new Promise((resolve, reject) => {
     const query = graphql(`
       {
-        allWordpressCategory {
+        allWordpressCategory(
+          filter: {slug: {nin: ["bibliotheque-livres", "jukebox"]}}
+        ){
           edges {
             node {
               id
-              name
               slug
             }
           }
@@ -96,11 +97,14 @@ exports.createPages = ({ graphql, actions }) => {
         reject(result.error)
       }
 
+      const allCategories = result.data.allWordpressCategory.edges
+      console.log(allCategories)
+
       // grab the content pulled thanks to the graphql query
-      const categoryEdges = result.data.allWordpressCategory.edges
+      // const categoryEdges = result.data.allWordpressCategory.edges
 
       // create a new static page for each one of the articles found
-      categoryEdges.forEach(edge => {
+      allCategories.forEach(edge => {
         createPage({
           path: `/categories/${edge.node.slug}`,
           component: path.resolve(`./src/templates/category.jsx`),

@@ -1,11 +1,8 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- COMPONENTS : BIBLIOTHQUE CARDS ----- */
 
-@import "about";
-@import "bibliotheque";
-@import "columns";
-@import "contact";
-@import "general";
-@import "homepage";
+.bibliotheque--carousel-card {
+  border: 3px solid red;
+}
 
 
 @media (min-width: $sm-screen) {
