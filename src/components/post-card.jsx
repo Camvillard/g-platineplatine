@@ -21,7 +21,7 @@ import Images from "../images/icon-images.svg"
 
 class PostCard extends React.Component {
 
-  setColorBackground = (post) => {
+  setColorBackground = () => {
     const colors = ["aqua", "pink", "yellow", "blue"]
     return colors[Math.floor(Math.random() * colors.length)]
   };
@@ -57,7 +57,7 @@ class PostCard extends React.Component {
 
   render() {
     const post = this.props.post
-    const backgroundColor = this.setColorBackground(post)
+    const backgroundColor = this.setColorBackground()
     const iconBackgroundColor = this.setIconBackground(backgroundColor)
     return(
       <div className={`regular-card ` + backgroundColor}>

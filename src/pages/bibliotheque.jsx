@@ -11,6 +11,7 @@ import Instagram from "../components/instagram";
 import PostCard from "../components/post-card";
 
 // images & assets
+import { setColorBackground } from "../utilities/cards";
 
 // styles
 import '../styles/main.scss';
@@ -26,27 +27,9 @@ class Bibliotheque extends React.Component {
           dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
-              }
-            },
             {
               breakpoint: 480,
               settings: {
@@ -64,7 +47,7 @@ class Bibliotheque extends React.Component {
 
           {carouselPost.map( post =>  {
               return(
-                <div key={post.node.id} className="bibliotheque--carousel-card">
+                <div key={post.node.id} className={`bibliotheque-carousel-card ${setColorBackground()}`}>
 
                   {post.node.title}
 
