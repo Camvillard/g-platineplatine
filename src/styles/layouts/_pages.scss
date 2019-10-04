@@ -1,8 +1,9 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- LAYOUTS : PAGES ----- */
 
-.bibliotheque-carousel {
-  width: calc(100vw - 48px);
-  margin: 64px auto auto;
+// page header
+
+.page-title {
+  text-align: center;
 }
 
 @media (min-width: $sm-screen) {

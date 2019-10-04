@@ -5,8 +5,7 @@ import Slider from "react-slick";
 
 // internal components
 import SEO from "../components/seo";
-import Header from "../components/header";
-import Navbar from "../components/navbar";
+import LightHeader from "../components/light-header";
 import Instagram from "../components/instagram";
 import PostCard from "../components/post-card";
 import BibliothequeCard from "../components/bibliotheque-card";
@@ -43,6 +42,12 @@ class Bibliotheque extends React.Component {
     return(
       <div className="page-layout index-page">
         <SEO title="la bibliothèque" keywords={[`platine`, `culture`, `musique`, `livres`]} />
+
+        <LightHeader />
+
+        <div className="page-title">
+          <h1>la bibliothèque</h1>
+        </div>
 
         <Slider {...carouselSettings} className="bibliotheque-carousel">
 

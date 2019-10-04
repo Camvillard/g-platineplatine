@@ -60,7 +60,7 @@ class PostCard extends React.Component {
     const backgroundColor = this.setColorBackground()
     const iconBackgroundColor = this.setIconBackground(backgroundColor)
     return(
-      <div className={`regular-card ` + backgroundColor}>
+      <div className={`regular-card card-background ` + backgroundColor}>
 
         <div className="post-header">
           <div className={`post-icon ` + iconBackgroundColor}>{this.setIcon(post)}</div>

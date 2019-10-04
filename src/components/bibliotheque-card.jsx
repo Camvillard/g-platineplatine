@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby";
 import Slider from "react-slick";
 
 // internal components
-
+import { setColorBackground } from "../utilities/cards";
 
 // images & assets
 
@@ -14,9 +14,10 @@ import '../styles/main.scss';
 const BibliothequeCard = (props)  => {
   const post = props.post.node
   const featuredImage = post.featured_media.source_url ? post.featured_media.source_url : ""
-  console.log(featuredImage)
+  const backgroundColor = setColorBackground()
+  console.log(backgroundColor)
   return(
-    <div className="bibliotheque-card-container">
+    <div className={`bibliotheque-card-container card-background ${backgroundColor}`}>
       <div className="bibliotheque-card" style={{backgroundImage: `url(${featuredImage})`}}>
         <div className="post-header">
 
@@ -25,7 +26,7 @@ const BibliothequeCard = (props)  => {
           </div>
 
           <h3 className="post-title">
-            <span  dangerouslySetInnerHTML= {{__html: post.title}} />
+            <span dangerouslySetInnerHTML= {{__html: post.title}} />
           </h3>
 
 
