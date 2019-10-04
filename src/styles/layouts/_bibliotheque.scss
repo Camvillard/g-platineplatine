@@ -1,0 +1,38 @@
+/*----- INDEX FOR LAYOUTS ----- */
+
+.bibliotheque-carousel {
+  width: calc(100vw - 48px);
+  margin: 20px auto auto;
+
+  .slick-prev,
+  .slick-next {
+      top: 54%;
+      z-index: 10;
+      width: 24px;
+      height: 24px;
+  }
+
+  [dir='rtl'] .slick-prev,
+  .slick-prev {
+      left: 24px;
+  }
+
+  [dir='rtl'] .slick-next,
+  .slick-next {
+      right: 24px;
+  }
+}
+
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

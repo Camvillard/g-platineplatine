@@ -1,13 +1,11 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- COMPONENTS : HEADER ----- */
 
-@import "about";
-@import "bibliotheque";
-@import "columns";
-@import "contact";
-@import "general";
-@import "homepage";
-@import "pages";
 
+.light-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

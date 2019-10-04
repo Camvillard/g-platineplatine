@@ -21,7 +21,7 @@ import Images from "../images/icon-images.svg"
 
 class PostCard extends React.Component {
 
-  setColorBackground = (post) => {
+  setColorBackground = () => {
     const colors = ["aqua", "pink", "yellow", "blue"]
     return colors[Math.floor(Math.random() * colors.length)]
   };
@@ -57,25 +57,25 @@ class PostCard extends React.Component {
 
   render() {
     const post = this.props.post
-    const backgroundColor = this.setColorBackground(post)
+    const backgroundColor = this.setColorBackground()
     const iconBackgroundColor = this.setIconBackground(backgroundColor)
     return(
-      <div className={`regular-card ` + backgroundColor}>
+      <div className={`regular-card card-background ` + backgroundColor}>
 
-        <div className="card-header">
-          <div className={`card-icon ` + iconBackgroundColor}>{this.setIcon(post)}</div>
-          <div className="header-meta">
-            <p className="meta">publié le : <span className="meta-content">{post.date}</span></p>
-            <p className="meta">dans <span className="meta-content">{post.categories[0].name}</span></p>
+        <div className="post-header">
+          <div className={`post-icon ` + iconBackgroundColor}>{this.setIcon(post)}</div>
+          <div className="post-header-meta">
+            <p className="post-meta">publié le : <span className="meta-content">{post.date}</span></p>
+            <p className="post-meta">dans <span className="meta-content">{post.categories[0].name}</span></p>
           </div>
         </div>
 
-        <div className="card-content">
+        <div className="post-content">
           <img src="https://contenu.platineplatine.com/wp-content/uploads/2019/08/platine_placeholder_9.jpg" alt="book open and tea"/>
-          <h3 className="card-title">
+          <h3 className="post-title">
             <span dangerouslySetInnerHTML= {{__html: post.title}} />
           </h3>
-          <p className="card-excerpt">
+          <p className="post-excerpt">
             <span dangerouslySetInnerHTML= {{__html: post.excerpt}} />
           </p>
           <Link to={"/"+ post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>

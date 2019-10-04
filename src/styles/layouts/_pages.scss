@@ -1,13 +1,14 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- LAYOUTS : PAGES ----- */
 
-@import "about";
-@import "bibliotheque";
-@import "columns";
-@import "contact";
-@import "general";
-@import "homepage";
-@import "pages";
+// page header
 
+.page-title {
+  text-align: center;
+  h1 {
+    margin-top: 8px;
+    font-size: 3.2rem;
+  }
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
         <div className="large-container">
 
           <div className="homepage-section last-article-section">
-            <Slider {...carouselSettings}>
+            <Slider {...carouselSettings} className="homepage-carousel">
 
               {carouselPost.map( post =>  {
                 return <LastPostCard key={post.node.id} post={post.node} />

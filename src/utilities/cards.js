@@ -30,4 +30,9 @@ const truncateWord = (string, words) => {
   return string.split(' ').slice(0, words).join(' ')
 }
 
-export { createExcerpt, createPrintedDate, pluralizeWord, truncateWord };
+const setColorBackground = () => {
+  const colors = ["aqua", "pink", "yellow", "blue"]
+  return colors[Math.floor(Math.random() * colors.length)]
+};
+
+export { createExcerpt, createPrintedDate, pluralizeWord, truncateWord, setColorBackground };
