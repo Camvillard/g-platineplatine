@@ -40,7 +40,7 @@ class Bibliotheque extends React.Component {
           ]
         }
     return(
-      <div className="page-layout index-page">
+      <div className="page-layout index-page page-container">
         <SEO title="la bibliothèque" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
         <LightHeader />
@@ -59,7 +59,16 @@ class Bibliotheque extends React.Component {
 
         </Slider>
 
-        biblotheque
+        <div className="posts-container container">
+
+          <h3>les autres articles</h3>
+
+          { allPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
+
+        </div>
+
+
+
 
         <Instagram />
 
@@ -84,6 +93,7 @@ export const query = graphql`
         node {
           id
           excerpt
+          slug
           content
           title
           date(formatString: "DD MMMM YYYY", locale: "fr-FR")

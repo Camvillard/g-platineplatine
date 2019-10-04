@@ -2,8 +2,28 @@
 
 .bibliotheque-carousel {
   width: calc(100vw - 48px);
-  margin: 64px auto auto;
+  margin: 20px auto auto;
+
+  .slick-prev,
+  .slick-next {
+      top: 54%;
+      z-index: 10;
+      width: 24px;
+      height: 24px;
+  }
+
+  [dir='rtl'] .slick-prev,
+  .slick-prev {
+      left: 24px;
+  }
+
+  [dir='rtl'] .slick-next,
+  .slick-next {
+      right: 24px;
+  }
 }
+
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
