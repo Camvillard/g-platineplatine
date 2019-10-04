@@ -9,6 +9,7 @@ import Header from "../components/header";
 import Navbar from "../components/navbar";
 import Instagram from "../components/instagram";
 import PostCard from "../components/post-card";
+import BibliothequeCard from "../components/bibliotheque-card";
 
 // images & assets
 import { setColorBackground } from "../utilities/cards";
@@ -28,7 +29,7 @@ class Bibliotheque extends React.Component {
           infinite: true,
           speed: 500,
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           responsive: [
             {
               breakpoint: 480,
@@ -47,11 +48,7 @@ class Bibliotheque extends React.Component {
 
           {carouselPost.map( post =>  {
               return(
-                <div key={post.node.id} className={`bibliotheque-carousel-card ${setColorBackground()}`}>
-
-                  {post.node.title}
-
-                </div>)
+                <BibliothequeCard post={post} key={post.node.id} />)
             }
           )}
 
@@ -84,8 +81,10 @@ export const query = graphql`
           excerpt
           content
           title
+          date(formatString: "DD MMMM YYYY", locale: "fr-FR")
           featured_media {
             id
+            source_url
           }
           categories {
             id

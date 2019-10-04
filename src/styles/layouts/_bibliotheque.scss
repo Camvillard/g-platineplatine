@@ -1,7 +1,8 @@
 /*----- INDEX FOR LAYOUTS ----- */
 
 .bibliotheque-carousel {
-  height: 90vh;
+  width: calc(100vw - 48px);
+  margin: auto;
 }
 
 @media (min-width: $sm-screen) {
