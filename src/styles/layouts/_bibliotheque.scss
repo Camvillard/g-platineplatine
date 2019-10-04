@@ -32,6 +32,34 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .bibliotheque-carousel {
+    width: 92vw;
+    margin: 20px auto auto;
+
+    .slick-prev,
+    .slick-next {
+        top: 48vh;
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+    }
+
+    [dir='rtl'] .slick-prev,
+    .slick-prev {
+      left: -2vw;
+    }
+
+    [dir='rtl'] .slick-next,
+    .slick-next {
+        right: -2vw;
+    }
+
+    .slick-active > div {
+      width: 96%;
+      margin: auto;
+    }
+  }
+
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

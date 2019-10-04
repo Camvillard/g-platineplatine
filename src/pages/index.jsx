@@ -58,7 +58,7 @@ class IndexPage extends React.Component {
 
         <div className="container">
 
-          <div className="homepage-section articles-section">
+          <div className="homepage-section grid two-columns">
 
           { firstSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
 

@@ -60,10 +60,11 @@ class Bibliotheque extends React.Component {
         </Slider>
 
         <div className="posts-container container">
-
           <h3>les autres articles</h3>
 
-          { allPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
+          <div className="grid two-columns">
+            { allPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
+          </div>
 
         </div>
 

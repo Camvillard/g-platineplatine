@@ -57,11 +57,6 @@
     padding: 24px 24%;
   }
 
-  .articles-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 24px;
-  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
