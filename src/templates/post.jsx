@@ -1,6 +1,6 @@
 // external libs
 import React from "react";
-// import { Link } from "gatsby";
+import { graphql } from "gatsby";
 
 // internal components
 import Layout from "../components/layout"

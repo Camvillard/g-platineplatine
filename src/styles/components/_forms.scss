@@ -9,7 +9,23 @@
   margin: auto;
 
   input {
-    height: 4rem;
+    height: 3.6rem;
+    border-radius: 32px;
+    margin: 8px 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0px 16px;
+    font-family: $accent-font;
+    font-size: 1.8rem;
+    display: block;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    background: transparent;
+  }
+
+  textarea {
+    height: 12rem;
     border-radius: 32px;
     margin: 8px 0;
     text-transform: uppercase;

@@ -98,7 +98,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       const allCategories = result.data.allWordpressCategory.edges
-      console.log(allCategories)
 
       // grab the content pulled thanks to the graphql query
       // const categoryEdges = result.data.allWordpressCategory.edges
@@ -117,11 +116,55 @@ exports.createPages = ({ graphql, actions }) => {
       })
       resolve()
     }) // end of query.then
+  }) // end of createWpCategories
+
+    // starting the create page actions
+  const createWpPages = new Promise((resolve, reject) => {
+    const query = graphql(`
+      {
+       allWordpressPage(filter: {slug: {nin: ["contact", "homepage", "a-propos"]}}) {
+         edges {
+           node {
+             id
+             title
+             slug
+             content
+           }
+         }
+       }
+      }
+    `)
+
+    query.then(result => {
+      if (result.errors) {
+        console.error(result.errors)
+        reject(result.error)
+      }
+
+      const allPages = result.data.allWordpressPage.edges
+
+      // grab the content pulled thanks to the graphql query
+      // const categoryEdges = result.data.allWordpressCategory.edges
+
+      // create a new static page for each one of the articles found
+      allPages.forEach(edge => {
+        createPage({
+          path: `/${edge.node.slug}`,
+          component: path.resolve(`./src/templates/page.jsx`),
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          context: {
+            id: edge.node.id,
+          },
+        })
+      })
+      resolve()
+    }) // end of query.then
   }) // end of createWpPosts
 
 
 
-  return Promise.all([createWpPosts, createWpCategories])
+  return Promise.all([createWpPosts, createWpCategories, createWpPages])
 } // createPages
 
 

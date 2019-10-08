@@ -9,7 +9,7 @@ import Icons from "../components/icons"
 import Logo from "../images/platine_logo-principal.svg";
 
 // styles
-import '../styles/layouts/_merci.scss';
+import '../styles/main.scss';
 
 
 const Merci = ({data}) => {

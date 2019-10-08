@@ -1,20 +1,64 @@
+// external libs
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
+// internal components
 import SEO from "../components/seo"
 
-class  ContactPage extends React.Component {
+// styles
+import '../styles/main.scss';
+
+class ContactPage extends React.Component {
+
+  state = {
+    email: '',
+    name: '',
+  }
 
   render() {
+    const page = this.props.data.wordpressPage
     return(
-      <div className="page-layout contact-page">
+      <div className="page-layout contact-page fullpage-layout flexbox centered">
         <SEO title="contact"/>
 
-        <form onSubmit={this.handleSubmit} id={this.props.id} className="form-stroked dark">
-          <input type="text" name="name" placeholder="prénom :" onChange={this.handleChange} onBlur={this.addCompleted}/>
-          <input type="email" name="email" placeholder="adresse mail :" onChange={this.handleChange} onBlur={this.addCompleted}/>
-          <button className="button simple-button"><span>envoyer</span></button>
-        </form>
+        <div className="page-container contact-container">
+
+          <div className="page-header">
+            <Link to="/" className="button simple-button back-to-site"><span>retour au site</span></Link>
+          </div>
+
+          <h1 className="page-title special-page-title">
+            <span dangerouslySetInnerHTML= {{__html: page.title}} />
+          </h1>
+
+          <div className="page-intro">
+            <div dangerouslySetInnerHTML= {{__html: page.content}} />
+          </div>
+
+          <form
+            action="/merci"
+            // onSubmit={this.handleSubmit}
+            method="post"
+            name="Contact form"
+            id={this.props.id}
+            className="form-stroked dark"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field">
+
+            {/* specifying name of  the form for Netlify */}
+            <input type="hidden" name="form-name" value="Contact form" />
+            {/* need a bot */}
+            <input type="hidden" name="bot-field" />
+
+            <input type="text" name="name" placeholder="prénom :" />
+            <input type="email" name="email" placeholder="adresse mail :" />
+            <input type="text" name="subject" placeholder="objet :" />
+            <textarea name="message" id="" cols="30" rows="3" placeholder="message :"></textarea>
+            <button className="button simple-button"><span>envoyer</span></button>
+          </form>
+
+        </div>
+
 
 
       </div>
@@ -33,6 +77,8 @@ query contactPage {
   wordpressPage(title: {eq: "contact"}) {
     id
     content
+    title
+    slug
   }
 }
 `

@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 
+// styles
+import '../styles/main.scss';
+
 const AboutPage = () => (
   <div>
     <SEO title="About" id="about" />

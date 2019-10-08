@@ -1,6 +1,6 @@
 // external libs
 import React from "react";
-import { StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 // internal stuff
 import Icons  from "./icons";
