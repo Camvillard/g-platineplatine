@@ -1,0 +1,40 @@
+/*----- COMPONENTS : CIRCLES ----- */
+
+
+
+@import "../mixins/circles";
+
+// @mixin color-circle($size, $color)
+
+.navbar {
+
+  .background-circles {
+    z-index: 1002;
+  }
+
+  .color-circle-aqua {
+    @include color-circle-aqua(540px);
+    top: -144px;
+    left: -60px;
+  }
+
+
+  .color-circle-pink {
+    @include color-circle-pink(380px);
+    bottom: -22px;
+    right: -120px;
+  }
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

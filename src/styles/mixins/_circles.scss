@@ -1,0 +1,45 @@
+/*----- MIXINS : CIRCLES ----- */
+
+@mixin color-circle-aqua($size) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: $aqua;
+  border-radius: 50%;
+}
+
+
+@mixin color-circle-yellow($size) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: $bright-yellow;
+  border-radius: 50%;
+}
+
+@mixin color-circle-blue($size) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: $bright-blue;
+  border-radius: 50%;
+}
+
+@mixin color-circle-pink($size) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: $light-pink;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+

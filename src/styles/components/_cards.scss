@@ -5,9 +5,15 @@
 
 .last-article-card {
   margin-bottom: 32px;
-  // background: $aqua;
   padding: 16px;
 
+  .last-article-box {
+    text-align: center;
+  }
+
+  .post-info  {
+    margin-bottom: 16px;
+  }
 
   .post-header-meta {
     margin-top: 16px;
