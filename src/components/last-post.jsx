@@ -19,7 +19,6 @@ class LastPostCard extends React.Component {
       <div className="last-article-card">
 
         <div className="last-article-box">
-          <p className="uppercased-text post-info">les derniers articles</p>
 
           <h3 className="post-title">
             <span dangerouslySetInnerHTML= {{__html: post.title}} />
