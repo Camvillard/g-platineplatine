@@ -8,6 +8,9 @@ import Book from "../images/icon-book.svg"
 import Podcast from "../images/icon-podcast.svg"
 import Images from "../images/icon-images.svg"
 
+// utilities
+import { createExcerpt } from "../utilities/cards";
+
 // images & assets
 
 
@@ -76,7 +79,7 @@ class PostCard extends React.Component {
             <span dangerouslySetInnerHTML= {{__html: post.title}} />
           </h3>
           <p className="post-excerpt">
-            <span dangerouslySetInnerHTML= {{__html: post.excerpt}} />
+            <div dangerouslySetInnerHTML= {{__html: createExcerpt(post.excerpt)}} />
           </p>
           <Link to={"/"+ post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>
         </div>
