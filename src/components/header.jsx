@@ -1,5 +1,5 @@
 // external libs
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
 
 // internalcomponents
@@ -16,14 +16,21 @@ import MiniLogo from "../images/mini-logo.svg";
 
 const HeaderMobile = () => {
   return(
-    <div className="header mobile-header">
-      <MiniLogo className="mini-logo" />
+    <Fragment>
+
       <Link to="/">
         <Logo className="logo mobile" />
       </Link>
-      <Icons class="navbar-icons" />
-      <NavbarMobile />
-    </div>
+
+      <div className="header mobile-header">
+        <Link to="/">
+          <MiniLogo className="mini-logo" />
+        </Link>
+        <Icons class="navbar-icons" />
+        <NavbarMobile />
+      </div>
+
+    </Fragment>
   )
 }
 
