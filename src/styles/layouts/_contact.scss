@@ -3,11 +3,16 @@
 .contact-page {
   background: $bright-yellow;
   height: 100vh;
+
+  .page-header {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+  }
 }
 
 .contact-container {
   width: 86%;
-
 }
 
 
@@ -19,6 +24,18 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .contact-page {
+
+    .page-header {
+      top: 4vh;
+      left: 4vh;
+    }
+  }
+
+  .contact-container {
+    width: 56%;
+  }
+
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

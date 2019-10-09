@@ -21,13 +21,14 @@
 }
 
 .more-link-container {
-  width: 62%;
+  width: 100%;
   margin: 24px auto;
+  text-align: center;
 }
 
 .about-section {
   background: $bright-yellow;
-  padding: 24px 24px 48px 24px;
+  padding: 48px 12%;
   p {
     margin-bottom: 24px;
   }

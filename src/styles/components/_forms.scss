@@ -80,7 +80,8 @@
     border-color: $aqua;
   }
 
-  input:hover {
+  input:hover,
+  textarea:hover {
     outline: none;
     outline-offset: 0px;
     border: 2px solid $aqua;
@@ -89,7 +90,9 @@
   }
 
   input:active,
-  input:focus {
+  input:focus,
+  textarea:active,
+  textarea:focus {
     outline: none;
     outline-offset: 0px;
     border: 2px solid $dark-aqua;
@@ -102,27 +105,31 @@
 
 .form-stroked.dark {
 
-  input {
+  input, textarea {
     border-color: $dark-gray;
     color: $dark-gray;
   }
 
   input.completed {
     border-color: $bright-blue;
+    // color: $bright-blue;
   }
 
   button {
     background: transparent;
   }
 
-  input:hover {
+  input:hover,
+  textarea:hover {
     border: 2px solid $bright-blue;
     background: $bright-blue;
     color: white;
   }
 
   input:active,
-  input:focus {
+  input:focus,
+  textarea:active,
+  textarea:focus {
     border: 2px solid $bright-blue;
     background: white;
     color: $bright-blue;

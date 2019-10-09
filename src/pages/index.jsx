@@ -25,7 +25,6 @@ class IndexPage extends React.Component {
     const carouselPost = allPosts.slice(0,3)
     const firstSectionPosts = allPosts.slice(1, 5)
     const secondSectionPosts = allPosts.slice(6, 8)
-    // const lastPost = allPosts[0].node
     const carouselSettings = {
       dots: true,
       infinite: true,
@@ -95,7 +94,7 @@ class IndexPage extends React.Component {
         </div>
         {/* end of .container */}
 
-        <div className="fullwidth-container">
+        <div className="container">
 
           <div className="homepage-section about-section">
 
@@ -109,7 +108,7 @@ class IndexPage extends React.Component {
           </div>
 
         </div>
-        {/* end of .fullwidth-container */}
+        {/* end of container */}
         <Instagram />
 
       </div>

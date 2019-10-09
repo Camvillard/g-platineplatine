@@ -13,7 +13,11 @@ class ContactPage extends React.Component {
   state = {
     email: '',
     name: '',
-  }
+  };
+
+  addCompleted = (e) => {
+    e.target.classList.add('completed')
+  };
 
   render() {
     const page = this.props.data.wordpressPage
@@ -21,11 +25,11 @@ class ContactPage extends React.Component {
       <div className="page-layout contact-page fullpage-layout flexbox centered">
         <SEO title="contact"/>
 
-        <div className="page-container contact-container">
+        <div className="page-header">
+          <Link to="/" className="button simple-button back-to-site"><span>retour au site</span></Link>
+        </div>
 
-          <div className="page-header">
-            <Link to="/" className="button simple-button back-to-site"><span>retour au site</span></Link>
-          </div>
+        <div className="page-container contact-container">
 
           <h1 className="page-title special-page-title">
             <span dangerouslySetInnerHTML= {{__html: page.title}} />
@@ -50,10 +54,10 @@ class ContactPage extends React.Component {
             {/* need a bot */}
             <input type="hidden" name="bot-field" />
 
-            <input type="text" name="name" placeholder="prénom :" />
-            <input type="email" name="email" placeholder="adresse mail :" />
-            <input type="text" name="subject" placeholder="objet :" />
-            <textarea name="message" id="" cols="30" rows="3" placeholder="message :"></textarea>
+            <input type="text" name="name" placeholder="prénom :" onBlur={this.addCompleted} />
+            <input type="email" name="email" placeholder="adresse mail :" onBlur={this.addCompleted} />
+            <input type="text" name="subject" placeholder="objet :" onBlur={this.addCompleted} />
+            <textarea name="message" id="" cols="30" rows="3" placeholder="message :" onBlur={this.addCompleted}></textarea>
             <button className="button simple-button"><span>envoyer</span></button>
           </form>
 

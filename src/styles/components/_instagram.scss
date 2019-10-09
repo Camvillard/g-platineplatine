@@ -1,5 +1,10 @@
 /*----- COMPONENTS  :  INSTAGRAM FOOTER ----- */
 
+.instagram-footer {
+  width: 92vw;
+  margin: auto;
+}
+
 .instagram-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -28,8 +33,7 @@
 @media (min-width: $md-screen) {
 
   .instagram-footer {
-    width: 82vw;
-    margin: auto;
+    width: 88vw;
   }
 
   .instagram-images {
