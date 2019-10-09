@@ -7,6 +7,35 @@
   padding-top: 18px;
 }
 
+.mini-logo {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+  background: white;
+  z-index: 1000;
+  border-top: 2px solid $aqua;
+
+  .navbar-icons {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 

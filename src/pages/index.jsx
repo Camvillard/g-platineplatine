@@ -20,7 +20,6 @@ import '../styles/main.scss';
 class IndexPage extends React.Component {
   render(){
     const pageData = this.props.data.wordpressPage.acf
-    console.log(pageData)
     const allPosts = this.props.data.allWordpressPost.edges
     const carouselPost = allPosts.slice(0,3)
     const firstSectionPosts = allPosts.slice(1, 5)
@@ -37,7 +36,6 @@ class IndexPage extends React.Component {
         <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
         <Header />
-        <Navbar />
 
         <div className="large-container">
 
