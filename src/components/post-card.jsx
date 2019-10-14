@@ -78,9 +78,9 @@ class PostCard extends React.Component {
           <h3 className="post-title">
             <span dangerouslySetInnerHTML= {{__html: post.title}} />
           </h3>
-          <p className="post-excerpt">
+          <div className="post-excerpt">
             <div dangerouslySetInnerHTML= {{__html: createExcerpt(post.excerpt)}} />
-          </p>
+          </div>
           <Link to={"/"+ post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>
         </div>
       </div>

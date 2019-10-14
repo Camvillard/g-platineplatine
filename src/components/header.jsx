@@ -16,8 +16,7 @@ import MiniLogo from "../images/mini-logo.svg";
 
 const HeaderMobile = () => {
   return(
-    <Fragment>
-
+    <header>
       <Link to="/">
         <Logo className="logo mobile" />
       </Link>
@@ -29,20 +28,34 @@ const HeaderMobile = () => {
         <Icons class="navbar-icons" />
         <NavbarMobile />
       </div>
-
-    </Fragment>
+    </header>
   )
 }
 
 const HeaderDesktop = () => {
   return(
-    <div className="header desktop-header">
-      <Icons id="navbar-icons" />
-      <Link to="/">
-        <Logo className="logo"/>
-      </Link>
-      <NavbarDesktop />
-    </div>
+    <header>
+      <div className="header desktop-header">
+        <Icons class="desktop-header-icons" />
+        <Link to="/">
+          <Logo className="logo"/>
+        </Link>
+        <NavbarDesktop />
+      </div>
+    </header>
+  )
+}
+
+const HeaderSpecial = () => {
+  return(
+    <header>
+      <div className="header special-header">
+        <Icons class="desktop-header-icons" />
+        <Link to="/">
+          <Logo className="logo"/>
+        </Link>
+      </div>
+    </header>
   )
 }
 
@@ -61,11 +74,7 @@ class Header extends React.Component {
 
   render(){
     return(
-      <header>
-
-        {this.state.isMobile ? <HeaderMobile /> : <HeaderDesktop />}
-
-      </header>
+      this.state.isMobile  ? <HeaderMobile />: <HeaderDesktop />
     )
   }
 }

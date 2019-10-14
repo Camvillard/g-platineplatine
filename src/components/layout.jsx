@@ -21,7 +21,6 @@ const Layout = ({ children }) => (
     render={data => (
       <React.Fragment>
         <Header />
-        <Navbar />
         <main>{children}</main>
         <Footer />
       </React.Fragment>

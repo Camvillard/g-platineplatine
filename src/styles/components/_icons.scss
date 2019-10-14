@@ -1,23 +1,6 @@
 /*----- COMPONENTS : ICONS ----- */
 
 
-// #social-icons {
-//   position: relative;
-//   width: 80px;
-//   height: 64px;
-// }
-
-// .social-icons {
-//   position: fixed;
-//   bottom: 22px;
-//   right: 16px;
-//   // width: 80px;
-//   // height: 64px;
-//   z-index: 1001;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
 
 .social-icon-white {
   display: flex;
@@ -48,27 +31,6 @@
 .icon-yellow {
   background: $bright-yellow;
 }
-
-// #instagram {
-//   position: absolute;
-//   bottom: 0;
-//   right: 20px;
-//   z-index: 4;
-// }
-
-// #twitter {
-//   position: absolute;
-//   right: 12px;
-//   bottom: 28px;
-//   z-index: 3;
-// }
-
-// #facebook {
-//   position: absolute;
-//   right: 38px;
-//   bottom: 16px;
-//   z-index: 2;
-// }
 
 
 @media (min-width: $sm-screen) {

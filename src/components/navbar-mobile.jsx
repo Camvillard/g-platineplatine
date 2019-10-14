@@ -53,7 +53,7 @@ class NavbarMobile extends React.Component {
             'menu'}
         </div>
 
-        <div className={`navbar nav-links ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'} `}>
+        <div className={`mobile-navbar ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'} `}>
 
           <div className="category-links">
             <Link to="/contact" className="nav-link">contact</Link>
@@ -65,6 +65,7 @@ class NavbarMobile extends React.Component {
               <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
                 <Link to="/categories/podcasts" className="nav-link">podcasts</Link>
                 <Link to="/categories/expos" className="nav-link">expos</Link>
+                <Link to="/categories/expos" className="nav-link">théâtre</Link>
               </div>
             </span>
           </div>
