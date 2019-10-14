@@ -16,12 +16,12 @@ import { setColorBackground } from "../utilities/cards";
 // styles
 import '../styles/main.scss';
 
-class Bibliotheque extends React.Component {
+class Jukebox extends React.Component {
 
 
   render(){
     const allPosts = this.props.data.allWordpressPost.edges
-    const carouselPost = allPosts.slice(0,2)
+    const carouselPost = allPosts.slice(0,6)
     // const lastPost = allPosts[0].node
     const carouselSettings = {
           dots: true,
@@ -40,16 +40,16 @@ class Bibliotheque extends React.Component {
           ]
         }
     return(
-      <div className="page-layout bibliotheque-page page-container">
-        <SEO title="la bibliothèque" keywords={[`platine`, `culture`, `musique`, `livres`]} />
+      <div className="page-layout jukebox-page page-container">
+        <SEO title="le jukebox" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
         <LightHeader />
 
         <div className="page-title">
-          <h1>la bibliothèque</h1>
+          <h1>le jukebox</h1>
         </div>
 
-        <Slider {...carouselSettings} className="bibliotheque-carousel">
+        <Slider {...carouselSettings} className="jukebox-carousel">
 
           {carouselPost.map( post =>  {
               return(
@@ -82,14 +82,14 @@ class Bibliotheque extends React.Component {
 
 
 export const query = graphql`
-  query bibliothequePage {
+  query jukeboxPage {
     site {
       siteMetadata {
         title
       }
     }
 
-    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "bibliotheque-livres"}}}}) {
+    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "jukebox"}}}}) {
       edges {
         node {
           id
@@ -113,4 +113,4 @@ export const query = graphql`
 `
 
 
-export default Bibliotheque
+export default Jukebox;

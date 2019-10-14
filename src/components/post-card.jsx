@@ -44,17 +44,22 @@ class PostCard extends React.Component {
     switch (post.categories[0].slug) {
       case 'jukebox':
         return <Music />;
+        break;
       case 'bibliotheque-livres':
         return <Book />;
+        break;
       case 'piecesdetheatre':
         return <Images />;
+        break;
       case 'podcasts':
         return <Podcast />;
+        break;
       case 'expos':
         return <Images />;
+        break;
       default:
-        console.log('missing category');
         return <Music />;
+        break;
     }
   }
 
@@ -78,9 +83,9 @@ class PostCard extends React.Component {
           <h3 className="post-title">
             <span dangerouslySetInnerHTML= {{__html: post.title}} />
           </h3>
-          <p className="post-excerpt">
+          <div className="post-excerpt">
             <div dangerouslySetInnerHTML= {{__html: createExcerpt(post.excerpt)}} />
-          </p>
+          </div>
           <Link to={"/"+ post.slug} className="button simple-button more-link"><span>lire la suite</span></Link>
         </div>
       </div>
