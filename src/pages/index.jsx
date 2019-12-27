@@ -109,8 +109,6 @@ class IndexPage extends React.Component {
           {/* end of container */}
         </Layout>
 
-        <Instagram />
-
       </div>
 
 

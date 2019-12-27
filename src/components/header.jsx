@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 // internalcomponents
 import Icons  from "./icons";
-import NavbarMobile from "./navbar-mobile";
+import HeaderMobile from "./header-mobile";
 import NavbarDesktop from "./navbar-desktop";
 
 import { FaInstagram } from "react-icons/fa";
@@ -71,7 +71,7 @@ class Header extends React.Component {
 
   render(){
     return this.state.isMobile ?
-      <NavbarMobile /> :
+      <HeaderMobile /> :
       <DesktopHeader
         onshowSubLinks={this.showSubLinks}
         showSubLinks={this.state.showSubLinks} />

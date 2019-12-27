@@ -2,13 +2,7 @@
 import React, { Fragment } from "react";
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { FaInstagram, FaTwitter, FaFacebookSquare } from "react-icons/fa";
-
-// internal stuff
-
-// import SearchBar from "./search-bar"
-
-// import Search from "./search"
-
+import MiniLogo from "../images/mini-logo.svg";
 
 
 class NavbarMobile extends React.Component {
@@ -51,9 +45,13 @@ class NavbarMobile extends React.Component {
 
           {this.state.dropdownIsActive ?
             <Fragment>
+
               <p>fermer</p>
             </Fragment> :
             <Fragment>
+              <Link to="/" className="mini-logo">
+                <MiniLogo />
+              </Link>
               <p>menu</p>
               <div className="mobile-navbar-social">
                 <FaInstagram />
