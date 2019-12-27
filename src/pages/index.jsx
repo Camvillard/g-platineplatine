@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Navbar from "../components/navbar";
+import Layout from "../components/layout";
 import Instagram from "../components/instagram";
 import MailChimpForm from "../components/mailchimp-form";
 import LastPostCard from "../components/last-post";
@@ -35,78 +36,81 @@ class IndexPage extends React.Component {
       <div className="page-layout index-page">
         <SEO id="homepage" title="Home" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
-        <Header />
-
-        <div className="large-container">
-
-          <div className="homepage-section last-article-section">
-            <Slider {...carouselSettings} className="homepage-carousel">
-
-              {carouselPost.map( post =>  {
-                return <LastPostCard key={post.node.id} post={post.node} />
-              })}
-            </Slider>
+        <Layout>
 
 
-          </div>
+          <div className="large-container">
 
-        </div>
-        {/* end of .fullwidth-container */}
+            <div className="homepage-section last-article-section">
+              <Slider {...carouselSettings} className="homepage-carousel">
 
-        <div className="container">
+                {carouselPost.map( post =>  {
+                  return <LastPostCard key={post.node.id} post={post.node} />
+                })}
+              </Slider>
 
-          <div className="homepage-section grid two-columns">
 
-          { firstSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
+            </div>
 
           </div>
-          {/* end of .homepage-section.articles-section */}
+          {/* end of .fullwidth-container */}
 
-        </div>
-        {/* end of .container */}
+          <div className="container">
 
-        <div className="homepage-section newsletter-section">
-          <h3 className="section-title">la newsletter collaborative de platine</h3>
-          <p>Un rendez-vous, tous les 15 jours, pour se raconter des petites histoires, partager ensemble nos dernières découvertes rayons livres et musique et tomber amoureux de nouveaux artistes. </p>
+            <div className="homepage-section grid two-columns">
 
-          <MailChimpForm />
+            { firstSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
 
-        </div>
-        {/* end of .newsletter-section */}
-
-
-        <div className="container">
-
-          <div className="homepage-section grid two-columns">
-
-          { secondSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
-
-          <div className="more-link-container">
-            <Link to="/" className="button button-aqua more-link">lire tous les articles</Link>
-          </div>
-
+            </div>
+            {/* end of .homepage-section.articles-section */}
 
           </div>
-          {/* end of .homepage-section.articles-section */}
+          {/* end of .container */}
 
-        </div>
-        {/* end of .container */}
+          <div className="homepage-section newsletter-section">
+            <h3 className="section-title">la newsletter collaborative de platine</h3>
+            <p>Un rendez-vous, tous les 15 jours, pour se raconter des petites histoires, partager ensemble nos dernières découvertes rayons livres et musique et tomber amoureux de nouveaux artistes. </p>
 
-        <div className="container">
-
-          <div className="homepage-section about-section">
-
-              <h3>à propos de platine</h3>
-              <p>Come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback.So thirsty, deluminator firs’ years follow me 12 inches of parchment.
-              </p>
-              <Link to="/" className="button simple-button more-link">
-                <span>en savoir plus</span>
-              </Link>
+            <MailChimpForm />
 
           </div>
+          {/* end of .newsletter-section */}
 
-        </div>
-        {/* end of container */}
+
+          <div className="container">
+
+            <div className="homepage-section grid two-columns">
+
+            { secondSectionPosts.map( post => <PostCard post={post.node} key={post.node.id} />) }
+
+            <div className="more-link-container">
+              <Link to="/" className="button button-aqua more-link">lire tous les articles</Link>
+            </div>
+
+
+            </div>
+            {/* end of .homepage-section.articles-section */}
+
+          </div>
+          {/* end of .container */}
+
+          <div className="container">
+
+            <div className="homepage-section about-section">
+
+                <h3>à propos de platine</h3>
+                <p>Come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback.So thirsty, deluminator firs’ years follow me 12 inches of parchment.
+                </p>
+                <Link to="/a-propos" className="button simple-button more-link">
+                  <span>en savoir plus</span>
+                </Link>
+
+            </div>
+
+          </div>
+          {/* end of container */}
+        </Layout>
+
         <Instagram />
 
       </div>

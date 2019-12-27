@@ -3,15 +3,13 @@ import React, { Fragment } from "react";
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { FaInstagram, FaTwitter, FaFacebookSquare } from "react-icons/fa";
 
-// internal stuff
-
-// import SearchBar from "./search-bar"
-
-// import Search from "./search"
-
+// internal components
+import Icons  from "./icons";
+import MiniLogo from "../images/mini-logo.svg";
+import Logo from "../images/logo_mobile.svg";
 
 
-class NavbarMobile extends React.Component {
+class HeaderMobile extends React.Component {
 
   constructor(props) {
     super(props)
@@ -44,14 +42,25 @@ class NavbarMobile extends React.Component {
     // and build the menu with it
     return(
       <Fragment>
-        <div
-          className={`toggle-menu ${this.state.dropdownIsActive ? 'opened' : 'closed'}`}
-          onClick={this.toggleDropdownMenu}
-         >
-          {this.state.dropdownIsActive ?
-            'fermer' :
-            'menu'}
-        </div>
+
+        <header className="header-mobile">
+
+          <Link to="/" className="mini-logo">
+            <MiniLogo />
+          </Link>
+
+          <div
+            className={`toggle-menu ${this.state.dropdownIsActive ? 'opened' : 'closed'}`}
+            onClick={this.toggleDropdownMenu}
+           >
+            {this.state.dropdownIsActive ?
+              'fermer' :
+              'menu'}
+          </div>
+
+          <Icons class="navbar-mobile" />
+
+        </header>
 
         <div className={`mobile-navbar ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'} `}>
 
@@ -83,7 +92,6 @@ class NavbarMobile extends React.Component {
 
         </div>
 
-
       </Fragment>
 
     )
@@ -91,6 +99,6 @@ class NavbarMobile extends React.Component {
 }
 
 
-export default NavbarMobile;
+export default HeaderMobile;
 
 

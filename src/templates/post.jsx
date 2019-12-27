@@ -27,21 +27,19 @@ class Post extends React.Component {
     return(
       <Layout>
 
-      <div className="single-article-template">
+        <div className="single-article-template">
 
-        <div className="post-header">
-          <div className="header-meta">
-            <p className="meta uppercased-text">{post.categories[0].name}</p>
-            <p className="meta uppercased-text">publié le : {post.date}</p>
+          <div className="post-header">
+            <div className="header-meta">
+              <p className="meta uppercased-text">{post.categories[0].name}</p>
+              <p className="meta uppercased-text">publié le : {post.date}</p>
+            </div>
+            <img src={featuredImage} alt={post.title}/>
           </div>
-          <img src={featuredImage} alt={post.title}/>
+
+          <div className="post-content" dangerouslySetInnerHTML= {{__html: post.content}} />
+
         </div>
-
-        <div className="post-content" dangerouslySetInnerHTML= {{__html: post.content}} />
-
-      </div>
-
-
 
       </Layout>
     )

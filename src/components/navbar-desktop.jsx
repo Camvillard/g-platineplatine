@@ -16,35 +16,15 @@ class NavbarDesktop extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      dropdownIsActive: false,
-      isMobileNav: false,
       showSubLinks: false
     }
   };
 
-  toggleDropdownMenu = () => {
-    this.setState({
-      dropdownIsActive: !this.state.dropdownIsActive
-    })
-  };
 
   showSubLinks = (e) => {
-    if (document.querySelector('.rotate-link')) {
-      e.target.classList.remove('rotate-link')
-    } else {
-      e.target.classList.add('rotate-link')
-    }
     this.setState({
       showSubLinks: !this.state.showSubLinks
     })
-  }
-
-  componentDidMount() {
-    if (window && window.innerWidth < 768) {
-      this.setState({
-        isMobileNav: true
-      })
-    }
   }
 
 
@@ -52,9 +32,25 @@ class NavbarDesktop extends React.Component {
     // grab all the categories returned by the query
     // and build the menu with it
     return(
-      <div className={`navbar main-navbar'}`}>
+      <div className={`desktop-navbar`}>
 
-      todo
+        <div className="category-links">
+          <Link to="/jukebox" className="nav-link">le jukebox</Link>
+          <Link to="/bibliotheque" className="nav-link">la bibliothèque</Link>
+          <span className="nav-link parent-link-nav" onClick={this.showSubLinks}>
+            etc. +
+            <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
+              <div className="sub-links-container">
+                <Link to="/categories/podcasts" className="nav-link">podcasts</Link>
+                <Link to="/categories/expos" className="nav-link">expos</Link>
+                <Link to="/categories/expos" className="nav-link">théâtre</Link>
+              </div>
+            </div>
+          </span>
+          <Link to="/contact" className="nav-link">contact</Link>
+          <Link to="/a-propos" className="nav-link">à propos</Link>
+        </div>
+
       </div>
     )
   }

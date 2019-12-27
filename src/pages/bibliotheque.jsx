@@ -45,9 +45,7 @@ class Bibliotheque extends React.Component {
 
         <LightHeader />
 
-        <div className="page-title">
-          <h1>la bibliothèque</h1>
-        </div>
+        <h1 className="page-title special-page-title">la bibliothèque</h1>
 
         <Slider {...carouselSettings} className="bibliotheque-carousel">
 

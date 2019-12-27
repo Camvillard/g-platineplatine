@@ -1,9 +1,7 @@
 // external libs
-import React from "react";
+import React, {Fragment} from "react";
+import {StaticQuery} from "gatsby";
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-
-// internal components
-
 
 
 
@@ -11,6 +9,22 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 
 // styles
+
+const MailChimpContainer = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+
+          wordpressPage(slug: {eq: "newsletter"}) {
+            id
+            content
+          }
+        }
+
+    `}
+    render={data => <MailChimpForm content={data.wordpressPage.content} />}
+  />
+)
 
 
 class MailChimpForm extends React.Component {
@@ -47,14 +61,18 @@ class MailChimpForm extends React.Component {
 
   render() {
     return(
-      <form onSubmit={this.handleSubmit} id={this.props.id} className="form-stroked dark">
-        <input type="text" name="name" placeholder="prénom :" onChange={this.handleChange} onBlur={this.addCompleted}/>
-        <input type="email" name="email" placeholder="adresse mail :" onChange={this.handleChange} onBlur={this.addCompleted}/>
-        <button className="button simple-button"><span>envoyer</span></button>
-      </form>
+      <Fragment>
+       <h3 className="centered-text">la newsletter collaborative de Platine</h3>
+        <div dangerouslySetInnerHTML={{__html: this.props.content}}/>
+        <form onSubmit={this.handleSubmit} id={this.props.id} className="form-stroked dark">
+          <input type="text" name="name" placeholder="prénom :" onChange={this.handleChange} onBlur={this.addCompleted}/>
+          <input type="email" name="email" placeholder="adresse mail :" onChange={this.handleChange} onBlur={this.addCompleted}/>
+          <button className="button simple-button"><span>envoyer</span></button>
+        </form>
+      </Fragment>
     )
   }
 }
 
 
-export default MailChimpForm;
+export default MailChimpContainer;
