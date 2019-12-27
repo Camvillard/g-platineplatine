@@ -24,6 +24,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $medium-gray;
 }
 
 article,
@@ -72,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
   text-transform: uppercase;
   line-height: 1.1;
+  color: $dark-gray;
 }
 
 .accent-text, em {

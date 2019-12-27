@@ -7,58 +7,77 @@
   flex-direction: column;
   align-items: flex-end;
   margin: auto;
+  width: 100%;
 
   input {
     height: 3.6rem;
-    border-radius: 32px;
+    border-radius: 24px;
     margin: 8px 0;
-    text-transform: uppercase;
-    font-weight: 800;
+    // text-transform: uppercase;
+    // font-weight: 800;
     padding: 0px 16px;
-    font-family: $accent-font;
-    font-size: 1.8rem;
+    // font-family: $accent-font;
+    font-size: 1.4rem;
     display: block;
     width: 100%;
     border-width: 2px;
     border-style: solid;
     background: transparent;
+    transition: 0.4s;
   }
 
   textarea {
     height: 12rem;
-    border-radius: 32px;
+    border-radius: 24px;
     margin: 8px 0;
-    text-transform: uppercase;
-    font-weight: 800;
+    // text-transform: uppercase;
+    // font-weight: 800;
     padding: 0px 16px;
-    font-family: $accent-font;
-    font-size: 2rem;
+    // font-family: $accent-font;
+    font-size: 1.4rem;
     display: block;
     width: 100%;
     border-width: 2px;
     border-style: solid;
     background: transparent;
+    transition: 0.4s;
   }
 
   button {
     border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 24px;
+    min-height: 4rem;
+    padding: 0 16px;
+  }
+
+  button:hover {
+    border-radius: 0;
   }
 
 
   ::placeholder {
     color: $dark-gray;
     opacity: 1;
+    font-size: 1.8rem;
+    font-family: $accent-font;
+        text-transform: uppercase;
+    font-weight: 800;
   }
 
-  input:hover {
-    outline: none;
-    outline-offset: 0px;
-  }
-
+  input:hover,
   input:active,
-  input:focus {
+  input:focus,
+  textarea:hover,
+  textarea:focus,
+  textarea:active,
+  button:hover,
+  button:active,
+  button:focus {
     outline: none;
     outline-offset: 0px;
+    border-radius: 0;
   }
 
 }
@@ -88,10 +107,10 @@
     color: white;
   }
 
-  input:active,
   input:focus,
-  textarea:active,
-  textarea:focus {
+  input:active,
+  textarea:focus,
+  textarea:active {
     outline: none;
     outline-offset: 0px;
     border: 2px solid $dark-aqua;
@@ -116,23 +135,24 @@
 
   button {
     background: transparent;
+    border-color: $dark-gray;
   }
 
   input:hover,
   textarea:hover {
-    border: 2px solid $bright-blue;
-    background: $bright-blue;
-    color: white;
+    // border: 2px solid $bright-blue;
+    // background: $bright-blue;
+    // color: white;
   }
 
   input:active,
   input:focus,
   textarea:active,
   textarea:focus {
-    border: 2px solid $bright-blue;
-    background: white;
-    color: $bright-blue;
-    box-shadow: 0 0 8px rgba(156, 229, 240 ,0.8)
+    // border: 2px solid $bright-blue;
+    // background: white;
+    // color: $bright-blue;
+    // box-shadow: 0 0 8px rgba(156, 229, 240 ,0.8)
   }
 
 }

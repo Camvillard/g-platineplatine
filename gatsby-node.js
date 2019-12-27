@@ -105,7 +105,7 @@ exports.createPages = ({ graphql, actions }) => {
       // create a new static page for each one of the articles found
       allCategories.forEach(edge => {
         createPage({
-          path: `/categories/${edge.node.slug}`,
+          path: `/${edge.node.slug}`,
           component: path.resolve(`./src/templates/category.jsx`),
           // Data passed to context is available
           // in page queries as GraphQL variables.

@@ -21,7 +21,10 @@ class LastPostCard extends React.Component {
         <div className="last-article-box">
 
           <h3 className="post-title">
-            <span dangerouslySetInnerHTML= {{__html: post.title}} />
+            <Link to={"/" + post.slug}>
+              <span dangerouslySetInnerHTML= {{__html: post.title}} />
+            </Link>
+
           </h3>
 
           <div className="post-header-meta">

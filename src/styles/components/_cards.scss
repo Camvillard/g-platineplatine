@@ -34,7 +34,8 @@
     margin-bottom: 24px;
   }
 
-  .post-title {
+  .post-title a {
+    color: $dark-gray;
     margin-top: 0;
     font-size: 2.4rem;
     line-height: 1;

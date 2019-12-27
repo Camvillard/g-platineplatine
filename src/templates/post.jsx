@@ -1,9 +1,11 @@
 // external libs
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 // internal components
 import Layout from "../components/layout"
+import {createPrintedDate} from "../utilities/cards"
+import CommentForm from "../components/comment-form"
 
 // images & assets
 
@@ -19,7 +21,11 @@ class Post extends React.Component {
     } else {
       return "https://contenu.platineplatine.com/wp-content/uploads/2019/09/placeholder-2.png"
     }
-  }
+  };
+
+  likePost = () => {
+    console.log("like post")
+  };
 
   render() {
     const post = this.props.data.wordpressPost
@@ -27,17 +33,47 @@ class Post extends React.Component {
     return(
       <Layout>
 
-        <div className="single-article-template">
+        <div className="single-article-template container">
 
           <div className="post-header">
             <div className="header-meta">
-              <p className="meta uppercased-text">{post.categories[0].name}</p>
-              <p className="meta uppercased-text">publié le : {post.date}</p>
+              <Link className="meta uppercased-text" to={"/" + post.categories[0].slug }>{post.categories[0].name}</Link>
+              <p className="meta uppercased-text">publié le { createPrintedDate(post.date)}</p>
             </div>
+            <h2 className="post-title" >
+              <span dangerouslySetInnerHTML= {{__html: post.title}} />
+            </h2>
             <img src={featuredImage} alt={post.title}/>
           </div>
 
           <div className="post-content" dangerouslySetInnerHTML= {{__html: post.content}} />
+
+          <div className="single-post-footer">
+            <div className="like-section" onClick={this.likePost}>
+               <span className="like">j'aime cet article</span>
+            </div>
+            <div className="footer-meta">
+              <Link className="meta uppercased-text" to={"/" + post.categories[0].slug }>{post.categories[0].name}</Link>
+              <p className="meta uppercased-text">publié le { createPrintedDate(post.date)}</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="single-article-comments">
+
+          <div className="container columns">
+
+            <div className="add-comment-section">
+              <h3>ajouter un commentaire</h3>
+              <CommentForm postId={post.wordpress_id} />
+            </div>
+
+            <div className="recent-articles">
+              <h3>articles reliés</h3>
+            </div>
+          </div>
+
 
         </div>
 
