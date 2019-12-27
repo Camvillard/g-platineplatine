@@ -61,7 +61,7 @@ class NavbarMobile extends React.Component {
             <Link to="/jukebox" className="nav-link">le jukebox</Link>
             <Link to="/bibliotheque" className="nav-link">la bibliothèque</Link>
             <span className="nav-link parent-link-nav" onClick={this.showSubLinks}>
-              {this.state.showSubLinks ? 'x' : 'etc'}
+              etc {this.state.showSubLinks ? '-' : '+'}
               <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
                 <Link to="/categories/podcasts" className="nav-link">podcasts</Link>
                 <Link to="/categories/expos" className="nav-link">expos</Link>

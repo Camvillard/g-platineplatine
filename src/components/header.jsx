@@ -16,28 +16,19 @@ import MiniLogo from "../images/mini-logo.svg";
 
 
 
-class Header extends React.Component {
 
-  state = {
-    showSubLinks: false
-  };
+const DesktopHeader = (props) => {
+  return(
+    <Fragment>
 
-  showSubLinks = (e) => {
-    this.setState({
-      showSubLinks: !this.state.showSubLinks
-    })
-  };
-
-  render(){
-    return(
       <div className="desktop-navbar">
 
         <div className="category-links">
           <Link to="/jukebox" className="nav-link">le jukebox</Link>
           <Link to="/bibliotheque" className="nav-link">la bibliothèque</Link>
-          <span className="nav-link parent-link-nav" onClick={this.showSubLinks}>
+          <span className="nav-link parent-link-nav" onClick={props.onshowSubLinks}>
             etc. +
-            <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
+            <div className={`sub-links ${props.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
               <div className="sub-links-container">
                 <Link to="/categories/podcasts" className="nav-link">podcasts</Link>
                 <Link to="/categories/expos" className="nav-link">expos</Link>
@@ -50,7 +41,40 @@ class Header extends React.Component {
         </div>
 
       </div>
-    )
+    </Fragment>
+   )
+}
+
+
+class Header extends React.Component {
+
+  state = {
+    isMobile: true,
+    showSubLinks: false
+  };
+
+  showSubLinks = (e) => {
+    this.setState({
+      showSubLinks: !this.state.showSubLinks
+    })
+  };
+
+  componentDidMount() {
+    if (window && window.innerWidth > 768  ) {
+      this.setState({isMobile: false})
+    }
+  }
+
+  adaptOnResize = (e) => {
+    console.log("resizing")
+  }
+
+  render(){
+    return this.state.isMobile ?
+      <NavbarMobile /> :
+      <DesktopHeader
+        onshowSubLinks={this.showSubLinks}
+        showSubLinks={this.state.showSubLinks} />
   }
 }
 
