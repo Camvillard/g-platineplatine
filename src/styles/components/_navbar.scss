@@ -3,10 +3,7 @@
 
 .toggle-menu {
   font-family: $headers-font;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  padding-left: 48px;
+  padding: 0  48px;
   height: 48px;
   position: fixed;
   bottom: 0;
@@ -14,7 +11,19 @@
   right: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 1002;
+  font-size: 2.2rem;
+
+  p {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .mobile-navbar-social svg{
+    margin: 0 4px;
+  }
 
   &.opened {
     background: none;

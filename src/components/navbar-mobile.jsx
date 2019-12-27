@@ -48,9 +48,21 @@ class NavbarMobile extends React.Component {
           className={`toggle-menu ${this.state.dropdownIsActive ? 'opened' : 'closed'}`}
           onClick={this.toggleDropdownMenu}
          >
+
           {this.state.dropdownIsActive ?
-            'fermer' :
-            'menu'}
+            <Fragment>
+              <p>fermer</p>
+            </Fragment> :
+            <Fragment>
+              <p>menu</p>
+              <div className="mobile-navbar-social">
+                <FaInstagram />
+                <FaTwitter />
+                <FaFacebookSquare />
+              </div>
+             </Fragment>
+           }
+
         </div>
 
         <div className={`mobile-navbar ${this.state.dropdownIsActive ? 'show-links' : 'hide-links'} `}>
@@ -82,7 +94,6 @@ class NavbarMobile extends React.Component {
           </div>
 
         </div>
-
 
       </Fragment>
 
