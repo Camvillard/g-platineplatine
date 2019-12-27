@@ -14,67 +14,42 @@ import { FaInstagram } from "react-icons/fa";
 import Logo from "../images/platine_logo-principal.svg";
 import MiniLogo from "../images/mini-logo.svg";
 
-const HeaderMobile = () => {
-  return(
-    <header>
-      <Link to="/">
-        <Logo className="logo mobile" />
-      </Link>
 
-      <div className="header mobile-header">
-        <Link to="/">
-          <MiniLogo className="mini-logo" />
-        </Link>
-        <Icons class="navbar-icons" />
-        <NavbarMobile />
-      </div>
-    </header>
-  )
-}
-
-const HeaderDesktop = () => {
-  return(
-    <header>
-      <div className="header desktop-header">
-        <Icons class="desktop-header-icons" />
-        <Link to="/">
-          <Logo className="logo"/>
-        </Link>
-        <NavbarDesktop />
-      </div>
-    </header>
-  )
-}
-
-const HeaderSpecial = () => {
-  return(
-    <header>
-      <div className="header special-header">
-        <Icons class="desktop-header-icons" />
-        <Link to="/">
-          <Logo className="logo"/>
-        </Link>
-      </div>
-    </header>
-  )
-}
 
 class Header extends React.Component {
-  state = {
-    isMobile: false
-  }
 
-  componentDidMount() {
-    if (window && window.innerWidth < 768) {
-      this.setState({
-        isMobile: true
-      })
-    }
-  }
+  state = {
+    showSubLinks: false
+  };
+
+  showSubLinks = (e) => {
+    this.setState({
+      showSubLinks: !this.state.showSubLinks
+    })
+  };
 
   render(){
     return(
-      this.state.isMobile  ? <HeaderMobile />: <HeaderDesktop />
+      <div className="desktop-navbar">
+
+        <div className="category-links">
+          <Link to="/jukebox" className="nav-link">le jukebox</Link>
+          <Link to="/bibliotheque" className="nav-link">la bibliothèque</Link>
+          <span className="nav-link parent-link-nav" onClick={this.showSubLinks}>
+            etc. +
+            <div className={`sub-links ${this.state.showSubLinks ? 'show-sub-links' : 'hide-sub-links'}`}>
+              <div className="sub-links-container">
+                <Link to="/categories/podcasts" className="nav-link">podcasts</Link>
+                <Link to="/categories/expos" className="nav-link">expos</Link>
+                <Link to="/categories/expos" className="nav-link">théâtre</Link>
+              </div>
+            </div>
+          </span>
+          <Link to="/contact" className="nav-link">contact</Link>
+          <Link to="/a-propos" className="nav-link">à propos</Link>
+        </div>
+
+      </div>
     )
   }
 }

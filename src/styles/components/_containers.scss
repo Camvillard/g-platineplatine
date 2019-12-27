@@ -5,6 +5,11 @@
   margin: 24px auto;
 }
 
+.small-container {
+  width: 92vw;
+  margin: 24px auto;
+}
+
 .large-container {
   width: 96vw;
   margin: 24px auto;
@@ -22,6 +27,9 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .small-container {
+    width: 38vw;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

@@ -1,5 +1,72 @@
 /*----- LAYOUTS : ABOUT ----- */
 
+.about-page  {
+  .image-section {
+    img {
+      width: 45%
+    }
+  }
+
+  .button-block {
+    margin: 40px auto;
+  }
+}
+
+.about-link {
+  text-transform: uppercase;
+  color: $dark-gray;
+  font-family: $accent-font;
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 2px solid $dark-gray;
+  margin-left: 24px;
+  transition: .3s;
+
+  &.jukebox-link {
+    position: relative;
+    &:after {
+      position: absolute;
+      top: -14px;
+      left: -14px;
+      content: "";
+      width: 56px;
+      height: 56px;
+      background: $bright-yellow;
+      border-radius: 50%;
+      z-index: -1;
+      transition: .5s;
+    }
+  }
+
+  &.jukebox-link:hover {
+    &:after {
+      left: 90%;
+    }
+  }
+
+  &.biblio-link {
+    position: relative;
+    &:after {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      content: "";
+      width: 56px;
+      height: 56px;
+      background: $aqua;
+      border-radius: 50%;
+      z-index: -1;
+      transition: .5s;
+    }
+  }
+
+  &.biblio-link:hover {
+    &:after {
+      right: 90%;
+    }
+  }
+}
+
 
 
 @media (min-width: $sm-screen) {

@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import Icons  from "./icons";
 
 // styles & assets
-import LightLogo from "../images/platine_logo-light.svg";
+import LightLogo from "../images/logo_mobile.svg";
 
 class LightHeader extends React.Component {
   render(){
