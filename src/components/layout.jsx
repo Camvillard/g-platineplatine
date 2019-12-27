@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Navbar from "./navbar"
 import Footer from "./footer"
+import Instagram from "./instagram"
 
 
 const Layout = ({ children }) => (
@@ -22,6 +23,7 @@ const Layout = ({ children }) => (
       <React.Fragment>
         <Header />
         <main>{children}</main>
+        <Instagram />
         <Footer />
       </React.Fragment>
     )}

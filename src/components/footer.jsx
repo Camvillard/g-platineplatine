@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 const Footer = () => {
  return(
+
    <footer className="columns">
 
      <div className="column one-fourth left-section">

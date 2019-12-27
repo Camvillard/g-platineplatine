@@ -68,8 +68,6 @@ class IndexPage extends React.Component {
           {/* end of .container */}
 
           <div className="homepage-section newsletter-section">
-            <h3 className="section-title">la newsletter collaborative de platine</h3>
-            <p>Un rendez-vous, tous les 15 jours, pour se raconter des petites histoires, partager ensemble nos dernières découvertes rayons livres et musique et tomber amoureux de nouveaux artistes. </p>
 
             <MailChimpForm />
 
@@ -110,8 +108,6 @@ class IndexPage extends React.Component {
           </div>
           {/* end of container */}
         </Layout>
-
-        <Instagram />
 
       </div>
 
