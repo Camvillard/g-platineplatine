@@ -35,4 +35,8 @@ const setColorBackground = () => {
   return colors[Math.floor(Math.random() * colors.length)]
 };
 
+const convertCommentsinNodes = (comments) => {
+
+}
+
 export { createExcerpt, createPrintedDate, pluralizeWord, truncateWord, setColorBackground };

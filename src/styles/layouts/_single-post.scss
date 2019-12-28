@@ -38,11 +38,12 @@
   }
 }
 
-.single-article-comments  {
+.single-article-comment-form  {
   background: $light-pink;
 }
 
-.add-comment-section {
+.add-comment-section,
+.related-articles {
   padding: 32px 16px;
 }
 
@@ -58,6 +59,36 @@
   textarea {
     font-size: 1.6rem;
     padding-top: 16px;
+  }
+}
+
+// related  articles
+
+
+.related-post-card {
+  margin: 24px 0 48px;
+  img {
+    margin-bottom: 0;
+    // margin-top: 24px;
+  }
+
+  .post-excerpt {
+    color: $dark-gray;
+    margin-bottom: 12px;
+  }
+}
+
+// comments
+
+.comment-card {
+  display: flex;
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid $aqua;
   }
 }
 
