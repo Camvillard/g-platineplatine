@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import {createPrintedDate} from "../utilities/cards"
 import CommentForm from "../components/comment-form"
 import RelatedPostCard from "../components/related-post-card"
-import  CommentCard from "../components/comment-card"
+import CommentCard from "../components/comment-card"
 
 // images & assets
 
@@ -18,7 +18,7 @@ import '../styles/main.scss';
 class Post extends React.Component {
 
   state = {
-    comments: []
+    comments: null
   }
 
   setFeaturedImage = (post) => {
@@ -34,36 +34,41 @@ class Post extends React.Component {
   };
 
   createCommentNodes = (comments) => {
-    console.log("all comments", comments);
+    // console.log("all comments", comments);
     const parentComments = comments.filter( comment =>
       comment.node.wordpress_parent === 0
    )
-    console.log("parent comments", parentComments)
-    this.setState({
-      comments: parentComments
-    })
+    // console.log("parent comments", parentComments)
     const childcomments = comments.filter( comment =>  comment.node.wordpress_parent !== 0)
     if (childcomments) {
       childcomments.forEach( comment => {
         const parent = parentComments.find( parentComment =>
           parentComment.node.wordpress_id === comment.node.wordpress_parent
-        )
-      })
-    }
+          )
+          parent.node.children ?
+          parent.node.children = [...parent.node.children, comment]
+          : parent.node.children = [comment]
+        })
+      }
+    this.setState({
+      comments: parentComments
+    })
 
   }
 
   componentDidMount() {
     this.createCommentNodes(this.props.data.allWordpressWpComments.edges)
+    this.setState({
+      commentCount: this.props.data.allWordpressWpComments.totalCount
+    })
   }
 
   render() {
     const post = this.props.data.wordpressPost
     const featuredImage = this.setFeaturedImage(post)
     const relatedArticles = this.props.data.allWordpressPost.edges
-    // const { comments } = this.state
-    // const comments = this.props.data.allWordpressWpComments.edges
-    // console.log(comments)
+    const { comments } = this.state
+    console.log(comments)
     return(
       <Layout>
 
@@ -119,7 +124,9 @@ class Post extends React.Component {
 
         <div className="single-article-comments container">
 
-
+            { comments ?
+              comments.map( comment => <CommentCard key={comment.node.id} comment={comment.node} />)
+              : <p>il n'y a pas encore de commentaire</p> }
         </div>
 
 
