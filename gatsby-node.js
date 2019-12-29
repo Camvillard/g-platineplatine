@@ -80,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
     const query = graphql(`
       {
         allWordpressCategory(
-          filter: {slug: {nin: ["bibliotheque-livres", "jukebox"]}}
+          filter: {slug: {nin: ["bibliotheque", "jukebox"]}}
         ){
           edges {
             node {

@@ -22,6 +22,7 @@ class Bibliotheque extends React.Component {
   render(){
     const allPosts = this.props.data.allWordpressPost.edges
     const carouselPost = allPosts.slice(0,6)
+    console.log(carouselPost)
     // const lastPost = allPosts[0].node
     const carouselSettings = {
           dots: true,
@@ -87,7 +88,7 @@ export const query = graphql`
       }
     }
 
-    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "bibliotheque-livres"}}}}) {
+    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "bibliotheque"}}}}) {
       edges {
         node {
           id

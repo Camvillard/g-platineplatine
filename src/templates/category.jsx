@@ -11,7 +11,7 @@ class Category extends React.Component {
     return(
       <React.Fragment>
         <SEO title={`Archives pour la catégorie ${category.name}`} keywords={[`platine`, `culture`, `musique`, `livres`]} />
-        todo
+        todo dfg
       </React.Fragment>
     )
   }
