@@ -5,7 +5,7 @@ import React, { Fragment } from "react";
 // internal components
 import SEO from "../components/seo";
 import SpecialTemplate from "../components/special-layout";
-import PlatineLogo from "../components/platine-logo";
+// import PlatineLogo from "../components/platine-logo";
 
 // styles
 import '../styles/main.scss';
@@ -17,7 +17,6 @@ class Testlayout extends React.Component {
     return(
       <Fragment>
         <SEO title="contact"/>
-        <PlatineLogo />
 
         <SpecialTemplate>
 

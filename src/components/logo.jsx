@@ -19,7 +19,6 @@ class LogoImage extends React.Component {
 
   render() {
     const image = this.props.data.placeholderImage.childImageSharp;
-    console.log(image)
     return(
       <div id="logo-platine">
         <img src={image.fluid.src} alt=""/>
