@@ -89,7 +89,13 @@ class Post extends React.Component {
                <span className="like">j'aime cet article</span>
             </div>
             <div className="footer-meta">
-              <Link className="meta uppercased-text" to={"/" + post.categories[0].slug }>{post.categories[0].name}</Link>
+              {
+                post.categories.map( (cat, i) => 
+                  <Link className="meta uppercased-text" to={"/" + cat.slug }>
+                    {cat.name + (i !== (post.categories.length -1) ?  ', ' : '') }
+                  </Link>
+                )
+              }
               <p className="meta uppercased-text">publié le { createPrintedDate(post.date)}</p>
             </div>
           </div>

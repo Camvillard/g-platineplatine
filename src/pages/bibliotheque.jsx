@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 // internal components
 import SEO from "../components/seo";
-import LightHeader from "../components/light-header";
+import Header from "../components/header";
 import Instagram from "../components/instagram";
 import PostCard from "../components/post-card";
 import BibliothequeCard from "../components/bibliotheque-card";
@@ -22,8 +22,6 @@ class Bibliotheque extends React.Component {
   render(){
     const allPosts = this.props.data.allWordpressPost.edges
     const carouselPost = allPosts.slice(0,6)
-    console.log(carouselPost)
-    // const lastPost = allPosts[0].node
     const carouselSettings = {
           dots: true,
           infinite: true,
@@ -44,7 +42,7 @@ class Bibliotheque extends React.Component {
       <div className="page-layout index-page page-container">
         <SEO title="la bibliothèque" keywords={[`platine`, `culture`, `musique`, `livres`]} />
 
-        <LightHeader />
+        <Header />
 
         <h1 className="page-title special-page-title">la bibliothèque</h1>
 
@@ -66,9 +64,6 @@ class Bibliotheque extends React.Component {
           </div>
 
         </div>
-
-
-
 
         <Instagram />
 
@@ -104,6 +99,7 @@ export const query = graphql`
           categories {
             id
             name
+            slug
           }
         }
       }
