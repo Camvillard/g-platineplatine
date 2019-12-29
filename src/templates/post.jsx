@@ -34,11 +34,9 @@ class Post extends React.Component {
   };
 
   createCommentNodes = (comments) => {
-    // console.log("all comments", comments);
     const parentComments = comments.filter( comment =>
       comment.node.wordpress_parent === 0
    )
-    // console.log("parent comments", parentComments)
     const childcomments = comments.filter( comment =>  comment.node.wordpress_parent !== 0)
     if (childcomments) {
       childcomments.forEach( comment => {
@@ -68,7 +66,6 @@ class Post extends React.Component {
     const featuredImage = this.setFeaturedImage(post)
     const relatedArticles = this.props.data.allWordpressPost.edges
     const { comments } = this.state
-    console.log(comments)
     return(
       <Layout>
 

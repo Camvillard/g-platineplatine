@@ -81,16 +81,61 @@
 // comments
 
 .comment-card {
-  display: flex;
-
-  .author-avatar {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid $aqua;
+  margin: 24px auto;
+  
+  .comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px auto;
+  
+    .author-avatar {
+      width: 68px;
+      height: 68px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid $aqua;
+      margin: 0;
+    }
+  
+    .comment-meta {
+      margin-left: 8px;
+    }
+  
+    .author-name,
+    .comment-date {
+      text-transform: uppercase;
+      color: $medium-gray;
+      font-size: 1.2rem;
+      margin:  0;
+    }
+  }
+  .comment-content {
+    width: 96%;
+    margin-left: 4%;
   }
 }
+
+
+
+.child-comment {
+  width: 88%;
+  margin-left: 6%;
+  border: 2px solid $aqua;
+  padding: 8px;
+
+  .comment-header {
+    margin-top: 0;
+    margin-left: -24px;
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border: none;
+    }
+  }
+
+}
+
 
 
 
