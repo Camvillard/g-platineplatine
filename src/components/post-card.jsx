@@ -44,7 +44,7 @@ class PostCard extends React.Component {
     switch (post.categories[0].slug) {
       case 'jukebox':
         return <Music />;
-      case 'bibliotheque-livres':
+      case 'bibliotheque':
         return <Book />;
       case 'piecesdetheatre':
         return <Images />;
@@ -53,13 +53,13 @@ class PostCard extends React.Component {
       case 'expos':
         return <Images />;
       default:
-        console.log('missing category');
         return <Music />;
     }
   }
 
   render() {
     const post = this.props.post
+    console.log("post", post)
     const backgroundColor = this.setColorBackground()
     const iconBackgroundColor = this.setIconBackground(backgroundColor)
     return(
